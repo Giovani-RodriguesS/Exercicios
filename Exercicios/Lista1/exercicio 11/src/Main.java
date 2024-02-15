@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Temperatura em celsius: ");
         celsius = in.nextDouble();
         fH = (celsius * 9/5) + 32;
-        System.out.println("Temperatura em fahrenheit: " + fH);
+        System.out.println("Temperatura em fahrenheit: " + fH + "F" );
 
     }
 }
