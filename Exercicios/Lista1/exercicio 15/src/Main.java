@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Agora o raio do cilindro");
         raio = in.nextDouble();
         volume = 3.14 * Math.pow(raio, 2) * altura;
-        System.out.println("O volume desse cilindro é: " + volume);
+        System.out.println("O volume desse cilindro é: " + volume + " cm³");
 
     }
 }

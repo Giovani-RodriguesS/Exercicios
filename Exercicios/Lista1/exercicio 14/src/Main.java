@@ -10,6 +10,6 @@ public class Main {
         System.out.println("Agora a altura: ");
         altura = in.nextDouble();
         area = base * altura / 2;
-        System.out.println("A area do triangulo é: " + area );
+        System.out.println("A area do triangulo é: " + area + "unidades." );
     }
 }
