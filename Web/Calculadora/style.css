@@ -21,6 +21,12 @@ body {
     overflow: hidden;
 }
 
+.visor {
+    border-radius: 5px;
+    border: 2px solid #ffffffe0;
+    padding: 7px;
+}
+
 .result {
     height: 90px;
     padding: 20px;
@@ -74,4 +80,9 @@ body {
 }
 #equal {
     background-color: cornflowerblue;
+}
+
+.visor {
+    border-radius: 5px;
+    border: 2px solid white;
 }
