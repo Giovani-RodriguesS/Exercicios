@@ -19,7 +19,7 @@ public class Main {
         System.out.println("9. Mais Opções ");
         System.out.println("Insira um numero: ");
         entrada = in.nextInt();
-        if(entrada == 5 || entrada == 6 || entrada == 7 || entrada == 8 || entrada == 9) {
+        if(entrada >= 5  && entrada <= 9) {
             if(entrada == 5)
             System.out.println("Opção escolhida: " + extrato);
             else if(entrada == 6)

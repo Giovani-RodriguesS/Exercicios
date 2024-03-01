@@ -13,11 +13,19 @@ public class Main {
         System.out.println("Insira o valor do lado 3:  ");
         c = in.nextDouble();
 //  condicional
-        if (a==b && a==c)
-            System.out.println("Seu triângulo é Equilátero");
-        else if (a!=b && b!=c && a!=c)
-            System.out.println("Seu triângulo é Escaleno");
-        else
-            System.out.println("Seu triângulo é Isósceles");
+
+    //verificação de existência
+        if( a < b+c && a > (Math.abs(b-c)) &&
+            b < a+c && b > Math.abs(a-c) &&
+            c < a+b && c > Math.abs(a-b) ) {
+    //verificação tipo de triângulo
+            if (a == b && a == c)
+                System.out.println("Seu triângulo é Equilátero");
+            else if (a != b && b != c && a != c)
+                System.out.println("Seu triângulo é Escaleno");
+            else
+                System.out.println("Seu triângulo é Isósceles");
+        }else
+            System.out.println("Medidas não formam um triângulo");
     }
 }

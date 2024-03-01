@@ -1,7 +1,6 @@
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-<<<<<<< HEAD
         int escolha;
         double area, perimetro, base, altura, raio, hipotenusa;
         Scanner in = new Scanner(System.in);
@@ -64,10 +63,5 @@ public class Main {
                 System.out.println("Opção inexistente");
                 break;
         }
-=======
-
-        Scanner in = new Scanner(System.in);
-        System.out.println(" ");
->>>>>>> 965fb98bc50235a50a0a7bb3a22234b0e0485396
     }
 }

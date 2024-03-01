@@ -1,7 +1,6 @@
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-<<<<<<< HEAD
 //  Variaveis
         int pagamento,parcelas;
         double compra, total;
@@ -56,10 +55,5 @@ public class Main {
                 System.out.println("Operação inválida");
                 break;
         }
-=======
-
-        Scanner in = new Scanner(System.in);
-        System.out.println(" ");
->>>>>>> 965fb98bc50235a50a0a7bb3a22234b0e0485396
     }
 }

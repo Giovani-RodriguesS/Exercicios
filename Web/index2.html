@@ -20,7 +20,7 @@
                 <label class="mainElements">Altura (m):</label>
                 <input class="input" type="text" name="iAltura" id="iAltura" >
             </p>
-                <h2 id="result"  class="mainElements">Resultado</h2>
+                <span id="result"  class="mainElements">Resultado</span>
         </div> 
     </main>
     <script>
@@ -42,7 +42,8 @@
                 } else {
                     resultado = "Obesidade III"         
                 }
-                alert(imc)
+               document.getElementById("result").innerText = resultado
+                
 }
     </script>
     <footer>
