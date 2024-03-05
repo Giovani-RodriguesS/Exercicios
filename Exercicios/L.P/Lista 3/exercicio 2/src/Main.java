@@ -9,12 +9,16 @@ public class Main {
         maior = 0;
         menor = 0;
 //  Condicional
-        for (int i=0;i<5;i++) {
+        for (int i = 0;i<5;i++) {
             num1 = in.nextInt();
-            if (num1 < menor)
+            if (i == 0)
                 menor = num1;
-            if (num1 > maior)
-                maior = num1;
+            for (int j=0;j<5;j++) {
+                if (num1 < menor)
+                    menor = num1;
+                if (num1 > maior)
+                    maior = num1;
+            }
         }
         System.out.println("Maior numero digitado: " + maior + " Menor: "+ menor);
     }
