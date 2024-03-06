@@ -12,14 +12,14 @@ public class Main {
         System.out.println("intervalo de "+num1+" a "+num2);
 //Condicional e While
         if (num1 < num2)
-            while (num1 < num2) {
-                System.out.println(num1);
+            while (num1 < num2-1) {
                 num1 += 1;
+                System.out.println(num1);
             }
         if (num1 > num2)
-            while (num1 > num2) {
-                System.out.println(num1);
+            while (num1 > num2+1) {
                 num1 -= 1;
+                System.out.println(num1);
             }
     }
 }
