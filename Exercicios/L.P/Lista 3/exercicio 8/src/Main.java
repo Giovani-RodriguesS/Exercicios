@@ -9,14 +9,17 @@ public class Main {
 
         System.out.println("Digite um número inteiro: ");
         num = in.nextInt();
+        if(num == 1) {
+            estadoNum = false;
+            System.out.println("Este número não é primo");
+        }
         for(int i = 2; i<num;i++)
             if(num % i == 0) {
                 System.out.println("Este número não é primo");
                 estadoNum = false;
                 break;
             }
-        if(estadoNum == true)
+        if(estadoNum)
             System.out.println("Seu número é primo");
     }
 }
-// primo: divisivel por um e por ele mesmo
