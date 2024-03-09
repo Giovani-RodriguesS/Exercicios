@@ -35,6 +35,6 @@ public class Main {
         //Saidas
         System.out.println("Maior valor: "+ max+" indice "+indMax);
         System.out.println("Menor valor: "+ min+" indice "+indMin);
-
+        in.close();
     }
 }

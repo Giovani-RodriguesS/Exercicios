@@ -7,14 +7,14 @@ public class Main {
         int[] v2 = new int[10];
 
 //      copia invertida
-        int n = v1.length;
-        for (int i=n-1; i>0; i--) {
-            n=0;
-            v2[i] = v1[i++];
+        int n = v1.length -1;
+        int it = 0;
+        for (int i=n; i>=0; i--) {
+            v2[i] = v1[it];
+            it++;
         }
         for(int j=0;j<10;j++) {
-            System.out.println(v1[j]);
-            System.out.println(v2[j]);
+            System.out.println("V1: "+v1[j]+" V2: "+v2[j]);
         }
 
     }
