@@ -11,39 +11,19 @@ void setup ()
 
 void loop () 
 {   
-    piscar_led(LED);
+    analog_led_led(LED);
 }
 
-void piscar_led (int led)
-{
-    //300ms
-    digitalWrite(led,1);
-    delay(300);
-    digitalWrite(led,0);
-    delay(300);
-    //500ms
-    digitalWrite(led,1);
-    delay(500);
-    digitalWrite(led,0);
-    delay(500);
-    //700ms
-    digitalWrite(led,1);
-    delay(700);
-    digitalWrite(led,0);
-    delay(700);
-    //900ms
-    digitalWrite(led,1);
-    delay(900);
-    digitalWrite(led,0);
-    delay(900);
-    //700ms
-    digitalWrite(led,1);
-    delay(700);
-    digitalWrite(led,0);
-    delay(700);
-    //500ms
-    digitalWrite(led,1);
-    delay(500);
-    digitalWrite(led,0);
-    delay(500);
+void analog_led (int led){
+    for (int i=0; i <= 10; i++)
+    {
+        analogWrite(led,(i/10)*256);
+        delay(300);
     }
+    for (int j=10; i >= 0; i--)
+    {
+        analogWrite(led,(i/10)*256);
+        delay(300);
+    }
+
+}

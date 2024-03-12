@@ -1,5 +1,4 @@
-//EX4
-//Vars
+//Variaveis
     int BT = 6;
     int LED = 4;
     bool estado_BT = false;
@@ -11,10 +10,13 @@ void setup ()
 }
 
 void loop () 
-{   estado_BT = digitalRead(BT);
+{   
+    estado_BT = digitalRead(BT);
     
-    if(estado_BT == true)
+    if(estado_BT == true){
         digitalWrite(LED,1);
+        delay(1000);
+    }
     else
         digitalWrite(LED,0);
 }

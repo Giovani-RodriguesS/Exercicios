@@ -10,7 +10,8 @@ void setup ()
 }
 
 void loop () 
-{   estado_BT = digitalRead(BT);
+{   
+    estado_BT = digitalRead(BT);
     
     if(estado_BT == true)
         digitalWrite(LED,1);

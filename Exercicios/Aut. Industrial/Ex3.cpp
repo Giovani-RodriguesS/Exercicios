@@ -7,38 +7,127 @@
     int D = 6;
     int C = 5;
     int BT = 2;
+	
     bool estado_BT = false;
+    int num = 0;
 void setup ()
 {
-  	pinMode(A,OUTPUT);
-  	pinMode(B,OUTPUT);
-  	pinMode(C,OUTPUT);
-  	pinMode(D,OUTPUT);
-  	pinMode(E,OUTPUT);
-  	pinMode(F,OUTPUT);
-  	pinMode(G,OUTPUT);
+  	for(int i=3;i<=9;i++){
+        pinMode(i,OUTPUT);
+    }
   	pinMode(BT,INPUT);
   	
 }
 
 void loop () 
 {   estado_BT = digitalRead(BT);
-    if(estado_BT == true) {
-        digitalWrite(A,1);
-        digitalWrite(B,1);
-        digitalWrite(C,1);
-        digitalWrite(D,1);
-        digitalWrite(E,1);
-        digitalWrite(F,1);
-        digitalWrite(G,1);
+    if (estado_BT == true) {
+        num += 1;
+        delay(500);
     }
-    else {
-        digitalWrite(A,0);
-        digitalWrite(B,0);
-        digitalWrite(C,0);
-        digitalWrite(D,0);
-        digitalWrite(E,0);
-        digitalWrite(F,0);
-        digitalWrite(G,0);
-    }
+    if (num>9)
+        num = 0;
+    visor(num);
+}
+//Controle do visor
+void visor(int num) {
+  switch(num){
+        case 0:
+            for(int j=3;j<=9;j++){
+                if (j == G) {
+                    digitalWrite(j,0);
+                }
+                else {
+                    digitalWrite(j,1);
+                }
+            }
+            break;
+        case 1:
+            for(int j=3;j<=9;j++){
+                if (j == B || j == C) {
+                    digitalWrite(j,1);
+                }
+                else {
+                    digitalWrite(j,0);
+                }
+            }
+            break;
+        case 2:
+            for(int j=3;j<=9;j++){
+                if (j == C || j == F) {
+                    digitalWrite(j,0);
+                }
+                else {
+                    digitalWrite(j,1);
+                }
+            }
+            break;
+        case 3:
+            for(int j=3;j<=9;j++){
+                if (j == E || j == F) {
+                    digitalWrite(j,0);
+                }
+                else {
+                    digitalWrite(j,1);
+                }
+            }
+            break;
+        case 4:
+            for(int j=3;j<=9;j++){
+                if (j == A || j == D || j == E) {
+                    digitalWrite(j,0);
+                }
+                else {
+                    digitalWrite(j,1);
+                }
+            }
+            break;
+        case 5:
+            for(int j=3;j<=9;j++){
+                if (j == B || j == E) {
+                    digitalWrite(j,0);
+                }
+                else {
+                    digitalWrite(j,1);
+                }
+            }
+            break;
+        case 6:
+            for(int j=3;j<=9;j++){
+                if (j == B) {
+                    digitalWrite(j,0);
+                }
+                else {
+                    digitalWrite(j,1);
+                }
+            }
+            break;
+        case 7:
+            for(int j=3;j<=9;j++){
+                if (j == A || j == B ||j == C) {
+                    digitalWrite(j,1);
+                }
+                else {
+                    digitalWrite(j,0);
+                }
+            }
+            break;
+        case 8:
+            for(int j=3;j<=9;j++)
+                digitalWrite(j,1);
+            break;
+        case 9:
+            for(int j=3;j<=9;j++){
+                if (j == E) {
+                    digitalWrite(j,0);
+                }
+                else {
+                    digitalWrite(j,1);
+                }
+            }
+            break;
+        default:
+            for(int j=3;j<=9;j++)
+                digitalWrite(j,0);
+  }
 }
