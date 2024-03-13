@@ -7,7 +7,7 @@ public class Main {
                     {12,23,45,65,76},
                     {98,76,54,43,23},
                     {360,200,40,100,120}};
-
+        System.out.println("Diagonal Secundário");
         for (int i=0;i<m.length;i++){
             diagonal[i] =  m[i][m.length-(1+i)];
             System.out.println(diagonal[i]);
