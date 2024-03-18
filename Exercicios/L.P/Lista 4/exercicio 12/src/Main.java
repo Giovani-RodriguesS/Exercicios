@@ -3,24 +3,26 @@ public class Main {
 
 //      matrizes, array e vars
         int [] produtos = new int[6];
-        int[][] matriz = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] matriz = {{4,5,-3},{2,1,0},{3,-1,1}};
         int[][] matrizSarrus = new int[matriz.length][matriz[0].length+2];
         int produto;
         int determinante=0;
 
-//      regra de Sarrus
-        int k=0;
+//      Formação Matriz Sarrus
         for (int i=0;i<matriz.length;i++)
-            for (int j = 0; j < matrizSarrus[0].length; j++) {
-                if (j==3)
-                    k=1;
-                if (j==3)
-                    k=2;
-                matrizSarrus[i][j] = matriz[i -k][j- k];
+            for (int j = 0; j < matriz.length; j++) {
+                matrizSarrus[i][j] = matriz[i][j];
             }
-        //{{1,2,9,1,2},
-        //{4,5,8,4,5},
-        //{7,8,12,7,8}};
+//      Aplicação regra de Sarrus
+        for (int i=0;i<matriz.length;i++)
+            for (int j = 0; j < 2; j++) {
+                matrizSarrus[i][j+3] = matriz[i][j];
+            }
+        for (int [] numbers : matrizSarrus) {
+            for (int num : numbers)
+                System.out.print(num+", ");
+            System.out.println(" ");
+        }
 
 //      diagonal principal
         for (int i=0;i<3;i++) {
@@ -37,9 +39,9 @@ public class Main {
             produtos[i+3] = produto;
         }
         //Determinante
-        for(int i=0;i<produtos.length;i++)
+        for(int i=0;i<produtos.length;i++) {
             determinante += produtos[i];
-
+        }
         System.out.println("Determinante: "+determinante);
     }
 }
