@@ -3,10 +3,9 @@ import java.util.Scanner;
 public class Main {
 
     public static int somar (int n) {
-        int resultado=1;
-        for (int i=2;i<=n;i++)
-            resultado += i;
-        return resultado;
+        if(n==1)
+            return 1;
+        return n+somar(n-1);
     }
     public static void main(String[] args) {
 
@@ -26,4 +25,5 @@ public class Main {
         }
         in.close();
     }
+
 }

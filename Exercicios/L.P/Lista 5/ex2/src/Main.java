@@ -3,11 +3,9 @@ import java.util.Scanner;
 public class Main {
 
     public static int fatorial (int n){
-        int mult=1;
-        for (int i=2;i<=n;i++){
-            mult *= i;
-        }
-        return mult;
+        if(n==2)
+            return 2;
+        return n* fatorial(n-1);
     }
     public static void main(String[] args) {
 
