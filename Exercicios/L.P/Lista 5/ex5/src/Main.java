@@ -5,20 +5,34 @@ public class Main {
         int pivo, i, j, aux;
         i = begin; // inicio do array
         j = end-1; // fim do array
-        pivo = vetor[(i + j)/2];
+        pivo = vetor[(i + j)/2]; //meio do vetor
 
-        while(vetor[i] < pivo)
-            i++;
-        while(vetor[j] > pivo)
-            j--;
-        if(i<=j){
-            aux =
+        while(i<=j) {
+            while (vetor[i] < pivo)
+                i++;
+            while (vetor[j] > pivo)
+                j--;
+            if (i <= j) {
+                aux = vetor[i];
+                vetor[i] = vetor[j];
+                vetor[j] = aux;
+                i++;
+                j--;
+            if(i<end)
+                quickSort(vetor,i,end);
+            if (j>begin)
+                quickSort(vetor,begin,j+1);
+            
+            }
         }
     }
-// int [] vetor = {5, 8, 1, 2 ,7, 3, 6, 9, 4, 10};
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        int [] vetor = {5, 8, 1, 2 ,7, 3, 6, 9, 4, 10};
+
+        quickSort(vetor,0,9);
+
     }
 }
 
@@ -51,6 +65,6 @@ void quicksort(int values[], int began, int end)
 	}   // continua a função até que j seja igual a began
 	if(j > began)
 		quicksort(values, began, j+1);
-	if(i < end)  //continua a função até que j seja igual a began
+	if(i < end)  //continua a função até que i seja igual a end
 		quicksort(values, i, end);
 }*/
