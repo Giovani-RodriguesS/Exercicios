@@ -8,7 +8,7 @@ int main()
     int lenStr;
 
     printf("Digite uma Strig (49 chars)\n");
-    scanf("%49s", &string);
+    scanf("%s", &string);
     printf("Invertendo...\n");
     lenStr = strlen(string);
 
