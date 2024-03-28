@@ -33,7 +33,7 @@ public class Main {
 
         quickSort(vetor,0,10);
         for (int number:vetor)
-            System.out.println(number+",");
+            System.out.print(number+", ");
     }
 }
 

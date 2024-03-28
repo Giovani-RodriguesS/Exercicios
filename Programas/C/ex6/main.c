@@ -6,10 +6,12 @@ int main()
 
     printf("Digite um numero: ");
     scanf("%d", &num);
-    if(num < 1)
+    if(num < 0)
         printf("Valor invalido");
+    if(num <= 1)
+        return 1;
     else
-        printf("%d",fatorial(num));
+        printf("Fatorial: %d",fatorial(num));
     return 0;
 }
 int fatorial(int num) {

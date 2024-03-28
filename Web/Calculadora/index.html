@@ -14,28 +14,28 @@
         </div>
         
         <div class="buttons">
-            <button class="bg-gray" onclick="appendToDisplay('%')">%</button>
-            <button class="bg-gray"onclick="appendToDisplay('-')">+/-</button>
-            <button class="bg-gray"onclick >C</button>
-            <button class="bg-gray"onclick="appendToDisplay('/')">/</button>
+            <button class="bg-gray" onclick="operator('%')">%</button>
+            <button class="bg-gray" onclick="operator('')">+/-</button>
+            <button class="bg-gray" onclick ="clearDisplay()" >C</button>
+            <button class="bg-gray" onclick="operator('/')">/</button>
 
-            <button class="bg-lightgray"onclick="appendToDisplay('7')">7</button>
-            <button class="bg-lightgray"onclick="appendToDisplay('8')">8</button>
-            <button class="bg-lightgray"onclick="appendToDisplay('9')">9</button>
-            <button class="bg-gray" onclick="appendToDisplay('*')">X</button>
+            <button class="bg-lightgray"onclick="bottonNum('7')">7</button>
+            <button class="bg-lightgray"onclick="bottonNum('8')">8</button>
+            <button class="bg-lightgray"onclick="bottonNum('9')">9</button>
+            <button class="bg-gray" onclick="operator('*')">X</button>
             
-            <button class="bg-lightgray"onclick="appendToDisplay('4')">4</button>
-            <button class="bg-lightgray"onclick="appendToDisplay('5')">5</button>
-            <button class="bg-lightgray"onclick="appendToDisplay('6')">6</button>
-            <button class="bg-gray"onclick="appendToDisplay('-')">-</button>
+            <button class="bg-lightgray"onclick="bottonNum('4')">4</button>
+            <button class="bg-lightgray"onclick="bottonNum('5')">5</button>
+            <button class="bg-lightgray"onclick="bottonNum('6')">6</button>
+            <button class="bg-gray"onclick="operator('-')">-</button>
             
-            <button class="bg-lightgray"onclick="appendToDisplay('%')">1</button>
-            <button class="bg-lightgray"onclick="appendToDisplay('%')">2</button>
-            <button class="bg-lightgray"onclick="appendToDisplay('%')">3</button>
-            <button class="bg-gray"onclick="appendToDisplay('%')">+</button>
+            <button class="bg-lightgray"onclick="bottonNum('1')">1</button>
+            <button class="bg-lightgray"onclick="bottonNum('2')">2</button>
+            <button class="bg-lightgray"onclick="bottonNum('3')">3</button>
+            <button class="bg-gray"onclick="operator('+')">+</button>
 
-            <button id="button-zero" class="bg-lightgray"onclick="appendToDisplay('%')">0</button>
-            <button class="bg-lightgray"onclick="appendToDisplay('%')">,</button>
+            <button id="button-zero" class="bg-lightgray"onclick="bottonNum('0')">0</button>
+            <button class="bg-lightgray"onclick="appendToDisplay(',')">,</button>
             <button id="equal" class="bg-gray">=</button>
 
         </div>

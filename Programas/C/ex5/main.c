@@ -46,6 +46,3 @@ void bSortDec (int arr[], int n) {
         printf("%d,%c ", arr[k],' ');
 }
 
-//Implemente um programa em C para ordenar uma matriz de inteiros em ordem crescente
-//ou decrescente usando o algoritmo de ordenação de sua escolha (por exemplo, bubble
-//sort, insertion sort, selection sort).

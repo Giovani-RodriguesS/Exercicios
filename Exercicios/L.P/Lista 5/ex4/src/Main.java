@@ -1,20 +1,25 @@
 import java.util.Scanner;
 
 public class Main {
+    static boolean palindromo (String p){
+        for (int j=0;j<p.length()-1;j++){
+            if(Character.isLetterOrDigit(p.charAt(j))) // Verifica se é um digito/letra
+                if (Character.toLowerCase(p.charAt(j)) != Character.toLowerCase(p.charAt(p.length()-j-1))) // verifica se os chars são diferentes
+                    return false;
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
-
-        String palindromo;
+        String palavra;
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Digite uma string: ");
-        palindromo = in.next();
-        
-
+        System.out.println("Digite uma palavra: ");
+        palavra = in.next();
+        if (palindromo(palavra))
+            System.out.println("É um palíndromo");
+        else
+            System.out.println("Não é um palíndromo");
         in.close();
     }
 }
-//Escreva uma função em Java para verificar se uma String é um palíndromo.
-//A Stringdeve ser digitada pelo usuário.
-//Um palíndromo é uma palavra, frase ou sequência quese lê da mesma forma de trás para frente.
-//Exemplos: “ovo”, “tenet”, “a base do tetodesaba”.

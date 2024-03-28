@@ -77,3 +77,17 @@ VALUES (1,7),
 (8,3),
 (9,4),
 (10,9)
+
+SELECT * FROM livros
+SELECT * FROM livros_autores
+SELECT * FROM autores
+
+--a. Listar todos os livros e seus autores.
+SELECT titulo, nome FROM (SELECT * FROM autores NATURAL INNER JOIN livros_autores)
+NATURAL INNER JOIN livros 
+
+--b. Encontrar todos os livros escritos por um autor específico.
+SELECT titulo FROM (SELECT * FROM livros NATURAL INNER JOIN livros_autores)
+NATURAL INNER JOIN autores
+WHERE 
+--c. Encontrar todos os autores que escreveram um livro específico.

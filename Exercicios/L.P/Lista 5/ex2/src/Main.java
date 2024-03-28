@@ -25,4 +25,3 @@ public class Main {
         in.close();
     }
 }
-//Implemente uma função para calcular o fatorial de um número inteiro N digitado pelousuário

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main()
-{   //vars
+{   // vars
     float valores [4], media=0;
 
     printf("Insira 4 valores para media: \n");
