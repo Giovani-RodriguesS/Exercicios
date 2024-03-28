@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/Css/style.css">
     <title>Calculadora</title>
 </head>
 
@@ -14,32 +14,32 @@
         </div>
         
         <div class="buttons">
-            <button class="bg-gray">%</button>
-            <button class="bg-gray">+/-</button>
-            <button class="bg-gray">C</button>
-            <button class="bg-gray">/</button>
+            <button class="bg-gray" onclick="operator('%')">%</button>
+            <button class="bg-gray" onclick="operator('')">+/-</button>
+            <button class="bg-gray" onclick ="clearDisplay()" >C</button>
+            <button class="bg-gray" onclick="operator('/')">/</button>
 
-            <button class="bg-lightgray">7</button>
-            <button class="bg-lightgray">8</button>
-            <button class="bg-lightgray">9</button>
-            <button class="bg-gray">X</button>
+            <button class="bg-lightgray"onclick="bottonNum('7')">7</button>
+            <button class="bg-lightgray"onclick="bottonNum('8')">8</button>
+            <button class="bg-lightgray"onclick="bottonNum('9')">9</button>
+            <button class="bg-gray" onclick="operator('*')">X</button>
             
-            <button class="bg-lightgray">4</button>
-            <button class="bg-lightgray">5</button>
-            <button class="bg-lightgray">6</button>
-            <button class="bg-gray">-</button>
+            <button class="bg-lightgray"onclick="bottonNum('4')">4</button>
+            <button class="bg-lightgray"onclick="bottonNum('5')">5</button>
+            <button class="bg-lightgray"onclick="bottonNum('6')">6</button>
+            <button class="bg-gray"onclick="operator('-')">-</button>
             
-            <button class="bg-lightgray">1</button>
-            <button class="bg-lightgray">2</button>
-            <button class="bg-lightgray">3</button>
-            <button class="bg-gray">+</button>
+            <button class="bg-lightgray"onclick="bottonNum('1')">1</button>
+            <button class="bg-lightgray"onclick="bottonNum('2')">2</button>
+            <button class="bg-lightgray"onclick="bottonNum('3')">3</button>
+            <button class="bg-gray"onclick="operator('+')">+</button>
 
-            <button id="button-zero" class="bg-lightgray">0</button>
-            <button class="bg-lightgray">,</button>
+            <button id="button-zero" class="bg-lightgray"onclick="bottonNum('0')">0</button>
+            <button class="bg-lightgray"onclick="appendToDisplay(',')">,</button>
             <button id="equal" class="bg-gray">=</button>
 
         </div>
     </main>
-    <script src="./script.js"></script>
+    <script src="assets/JS/script.js"></script>
 </body>
 </html>
