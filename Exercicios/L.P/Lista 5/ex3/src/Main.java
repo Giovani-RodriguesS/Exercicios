@@ -3,10 +3,9 @@ import java.util.Scanner;
 public class Main {
 
     public static int exponencial (int num1,int num2) {
-        int m=1;
-        for (int i=0;i<num2;i++)
-                m *= num1;
-        return m;
+        if(num2==1)
+            return num1;
+        return num1 * exponencial(num1, num2-1);
     }
 
     public static void main(String[] args) {
@@ -23,6 +22,3 @@ public class Main {
         in.close();
     }
 }
-//Crie uma função para calcular a potência de um número inteiro X elevado a uma potênciainteira Y.
-//Os valores de X e Y serãofornecidos pelo usuário. Y deve ser maior ou igual azero.
-//Proibido utilizar Math.pow(x,y)

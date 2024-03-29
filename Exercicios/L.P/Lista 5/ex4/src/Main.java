@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
+
     static boolean palindromo (String p){
         for (int j=0;j<p.length()-1;j++){
             if(Character.isLetterOrDigit(p.charAt(j))) // Verifica se é um digito/letra
@@ -11,6 +12,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
         String palavra;
         Scanner in = new Scanner(System.in);
 

@@ -7,6 +7,7 @@ public class Main {
             return 2;
         return n* fatorial(n-1);
     }
+
     public static void main(String[] args) {
 
         int num;
@@ -20,6 +21,7 @@ public class Main {
             if (num < 1)
                 System.out.println("Digite um valor válido!");
         }while (num < 1);
+
 //  saida
             System.out.println("Resultado de "+num+"!: "+fatorial(num));
         in.close();

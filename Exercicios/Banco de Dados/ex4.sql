@@ -61,3 +61,19 @@ VALUES
 ('2040-10-03',9,8),
 ('2040-04-06',10,10),
 ('2040-01-06',5,5)
+
+
+SELECT * FROM pacientes
+SELECT * FROM medicos
+SELECT * FROM registro_medico
+
+--a. Listar todos os pacientes de um médico específico.
+SELECT pacientes.nome FROM pacientes NATURAL INNER JOIN registro_medico
+WHERE  id_medico = (SELECT id_medico FROM medicos WHERE nome = 'Dra. Lívia')
+
+--b. Encontrar todos os médicos de um paciente específico.
+SELECT medicos.nome FROM medicos NATURAL INNER JOIN registro_medico
+WHERE  id_paciente = (SELECT id_paciente FROM pacientes WHERE nome = 'Valéria')
+
+--c. Contar o número médio de pacientes por médico.
+

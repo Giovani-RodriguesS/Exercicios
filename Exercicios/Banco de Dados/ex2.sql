@@ -10,9 +10,7 @@ SELECT * FROM aluno_turma
 
 CREATE TABLE turmas (
 	id_turma SERIAL PRIMARY KEY,
-	professor varchar(100),
-	id_curso int,
-	CONSTRAINT fk_curso FOREIGN KEY (id_curso) REFERENCES cursos(id_curso)	
+	professor varchar(100)
 )
 
 CREATE TABLE alunos (
@@ -28,19 +26,25 @@ CREATE TABLE aluno_turma (
 	CONSTRAINT fk_turma FOREIGN KEY (id_turma) REFERENCES turmas(id_turma)	
 )
 
+CREATE TABLE turma_curso (
+	id_curso int,
+	CONSTRAINT fk_curso FOREIGN KEY (id_curso) REFERENCES cursos(id_curso),
+	id_turma int,
+	CONSTRAINT fk_turma FOREIGN KEY (id_turma) REFERENCES turmas(id_turma)	
+)
 
-INSERT INTO turmas (professor, id_curso) 
+INSERT INTO turmas (professor) 
 VALUES 
-('Carlos Santos', 1),
-('Juliana Almeida', 2),
-('André Oliveira', 3),
-('Patrícia Silva', 4),
-('Tiago Fernandes', 5),
-('Renata Costa', 6),
-('Rodrigo Pereira', 7),
-('Camila Rodrigues', 8),
-('Lucas Martins', 9),
-('Bruna Souza', 10)
+('Carlos Santos'),
+('Juliana Almeida'),
+('André Oliveira'),
+('Patrícia Silva'),
+('Tiago Fernandes'),
+('Renata Costa'),
+('Rodrigo Pereira'),
+('Camila Rodrigues'),
+('Lucas Martins'),
+('Bruna Souza')
 
 INSERT INTO cursos (nome, area)
 VALUES 
@@ -62,7 +66,6 @@ VALUES
 (6,7),
 (5,10),
 (1,9),
-(10,1),
 (9,2),
 (8,3),
 (7,4),
@@ -73,3 +76,39 @@ VALUES
 (2,8),
 (1,8),
 (1,9);
+
+INSERT INTO turma_curso (id_curso, id_turma)
+VALUES 
+(10,1),
+(3,8),
+(6,7),
+(5,10),
+(1,9),
+(9,2),
+(8,3),
+(7,4),
+(6,5),
+(5,6),
+(4,7),
+(3,7),
+(2,8),
+(1,8),
+(1,9);
+
+SELECT * FROM cursos
+SELECT * FROM turmas
+SELECT * FROM alunos
+SELECT * FROM aluno_turma
+SELECT * FROM turma_curso
+
+--a. Listar todos os alunos matriculados em uma turma específica.
+SELECT nome FROM alunos NATURAL INNER JOIN 
+(SELECT * FROM aluno_turma NATURAL INNER JOIN turmas)
+WHERE id_turma = 3
+
+--b. Encontrar todos os cursos ministrados em uma turma específica.
+SELECT cursos.nome FROM cursos NATURAL INNER JOIN 
+(SELECT * FROM turma_curso NATURAL INNER JOIN turmas)
+WHERE id_turma = 8
+
+--c. Contar o número de alunos em cada turma.

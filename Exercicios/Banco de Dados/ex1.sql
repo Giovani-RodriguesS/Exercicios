@@ -89,5 +89,8 @@ NATURAL INNER JOIN livros
 --b. Encontrar todos os livros escritos por um autor específico.
 SELECT titulo FROM (SELECT * FROM livros NATURAL INNER JOIN livros_autores)
 NATURAL INNER JOIN autores
-WHERE 
+WHERE nome = 'George Orwell'
 --c. Encontrar todos os autores que escreveram um livro específico.
+SELECT nome FROM (SELECT * FROM livros NATURAL INNER JOIN livros_autores)
+NATURAL INNER JOIN autores
+WHERE titulo = 'Cem Anos de Solidão'

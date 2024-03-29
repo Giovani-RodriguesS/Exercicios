@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         int x;
-        int [] vetor = {10,21,30,42,53,65,78,89,99,100};
+        int [] vetor = {10,21,30,42,53,65,78,89,99,100,110,230,345,354,445,654,789,900,1230,2300,10000};
         Scanner in = new Scanner(System.in);
 
         System.out.println("Busca Binária\nQual valor deseja achar ?");
@@ -15,22 +15,21 @@ public class Main {
             System.out.println("Não encontrado");
         else
             System.out.println("Valor no indice "+ x);
-
-
     }
-    static int binarySearch(int x, int [] vetor, int e, int d) {
+
+    static int binarySearch(int chave, int [] vetor, int e, int d) {
 
         int meio = (e+d)/2; // Define meio do vetor
 
-        if(vetor[meio] == x) // se for, valor encontrado
+        if(vetor[meio] == chave) // se for, valor encontrado
             return meio;
-        if (e>=d) // se esq maior ou igual a dir, valor não achado
+        if (e>=d) // valor não achado
             return -1;
         else {
-            if (x < vetor[meio]) // avalia se x é menor que o meio;
-                return binarySearch(x, vetor, e, meio - 1); // diminui a direita
-            if (x > vetor[meio]) // avalia se x é maior que o meio;
-                return binarySearch(x, vetor, meio + 1, d); //diminui a esquerda
+            if (chave < vetor[meio]) // avalia se chave é menor que o meio;
+                return binarySearch(chave, vetor, e, meio - 1); // diminui a direita
+            if (chave > vetor[meio]) // avalia se chave é maior que o meio;
+                return binarySearch(chave, vetor, meio + 1, d); //diminui a esquerda
 
         }
         return 0;
