@@ -2,23 +2,24 @@
 const result = document.querySelector('.result');
 const botton = document.querySelector('.buttons button');
 
-//  stack
+//  stacks
 let numbers_stack = []
 let operator_stack =[]
 let number_complete = false
 let count = 1;
 result.value = ''
 
-
 //  Functions
+
+// clear display
 function clearDisplay () {
     result.innerText = '0'
     result.value = '';
     count = 1
     number_complete = false
-
 }
 
+// botton
 function bottonNum (num) {
     if(number_complete)
         clearDisplay();
@@ -31,18 +32,18 @@ function bottonNum (num) {
         count++
 }
 
+// calculate
 function calculate () {
     addNumberToStack();
-    let result=0;
-    
+    let resultOfCalc=0
     while (operator_stack.length()>0) {
-        result = partCalc();
-        addResultToStack(result);
+        resultOfCalc = partCalc();
+        addResultToStack(resultOfCalc);
     } 
-    alert(result);
     result.innerText = result.valueOf = resultOfCalc;
 }
 
+// PartialCalculate
 function partCalc () {
     let n2 = numbers_stack.pop();
     let n1 = numbers_stack.pop();
@@ -52,11 +53,13 @@ function partCalc () {
        
 }
 
+// Add number to number_stack
 function addNumberToStack(){
     number_complete = true;
     numbers_stack.push(result.value);
 }
 
+// 
 function operator (value) {
     if(!number_complete) {
         addNumberToStack()
@@ -64,18 +67,18 @@ function operator (value) {
             let resultOfCalc = partCalc();
             addResultToStack(resultOfCalc);
         }
-    } 
-    else {
-        operator_stack.pop()
+    } else {
+        operator_stack.pop(value)
     }
     addOperatorToStack(value)
-    alert(operator_stack)
 }
 
+// add operator to operator_stack
 function addOperatorToStack(value) {
     operator_stack.push(value);
 }
 
+// precedence
 function precedence() {
     let operators = new Map([
         ['+',1],
@@ -87,11 +90,14 @@ function precedence() {
     ])
     return operators.get(op2) > operators.get(op1) 
 }
+
+// top of operator_stack
 function topOfOperartorStack() {
     return operator_stack[operator_stack.length-1]
 }
 
-//adiciona na pilha o numero
+//add result of calculate to numbers_stack
 function addResultToStack(number) {
     numbers_stack.push(number)
 }
+// 
