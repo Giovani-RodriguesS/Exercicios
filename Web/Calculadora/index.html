@@ -14,8 +14,8 @@
         </div>
         
         <div class="buttons">
-            <button class="bg-gray" onclick="operator('%')">%</button>
-            <button class="bg-gray" onclick="operator('')">+/-</button>
+            <button class="bg-gray" onclick="operator()">(</button>
+            <button class="bg-gray" onclick="operator()">)</button>
             <button class="bg-gray" onclick ="clearDisplay()" >C</button>
             <button class="bg-gray" onclick="operator('/')">/</button>
 
@@ -35,8 +35,8 @@
             <button class="bg-gray"onclick="operator('+')">+</button>
 
             <button id="button-zero" class="bg-lightgray"onclick="bottonNum('0')">0</button>
-            <button class="bg-lightgray"onclick="appendToDisplay(',')">,</button>
-            <button id="equal" class="bg-gray">=</button>
+            <button class="bg-lightgray"onclick="bottonNum(',')">,</button>
+            <button id="equal" class="bg-gray" onclick="calculate()">=</button>
 
         </div>
     </main>
