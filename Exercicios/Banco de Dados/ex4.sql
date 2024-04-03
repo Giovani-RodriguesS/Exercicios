@@ -76,4 +76,7 @@ SELECT medicos.nome FROM medicos NATURAL INNER JOIN registro_medico
 WHERE  id_paciente = (SELECT id_paciente FROM pacientes WHERE nome = 'Valéria')
 
 --c. Contar o número médio de pacientes por médico.
-
+SELECT medicos.nome, AVG(total_de_pacientes) AS media_de_pacientes
+FROM (SELECT id_medico, COUNT(id_paciente) AS total_de_pacientes FROM registro_medico 
+	 GROUP BY id_medico) NATURAL INNER JOIN medicos 
+GROUP BY medicos.nome ORDER BY media_de_pacientes DESC

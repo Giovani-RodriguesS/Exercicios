@@ -79,4 +79,7 @@ NATURAL INNER JOIN funcionarios
 WHERE nome_func = 'Gabriel'
 
 --c. Calcular a média de funcionários por projeto.
-SELECT SUM() FROM     
+SELECT nome_projeto, AVG(total_de_func) AS media_de_func --media com base no total de id_func por projeto -- 
+FROM (SELECT id_projeto, COUNT(id_func) AS total_de_func FROM funcionarios_projetos 
+	 GROUP BY id_projeto) NATURAL INNER JOIN projetos 
+GROUP BY nome_projeto ORDER BY media_de_func DESC

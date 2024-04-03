@@ -80,7 +80,7 @@ VALUES
 INSERT INTO turma_curso (id_curso, id_turma)
 VALUES 
 (10,1),
-(3,8),
+(3,7),
 (6,7),
 (5,10),
 (1,9),
@@ -90,7 +90,7 @@ VALUES
 (6,5),
 (5,6),
 (4,7),
-(3,7),
+(3,8),
 (2,8),
 (1,8),
 (1,9);
@@ -104,11 +104,13 @@ SELECT * FROM turma_curso
 --a. Listar todos os alunos matriculados em uma turma específica.
 SELECT nome FROM alunos NATURAL INNER JOIN 
 (SELECT * FROM aluno_turma NATURAL INNER JOIN turmas)
-WHERE id_turma = 3
-
+WHERE id_turma = 8
+ 
 --b. Encontrar todos os cursos ministrados em uma turma específica.
 SELECT cursos.nome FROM cursos NATURAL INNER JOIN 
 (SELECT * FROM turma_curso NATURAL INNER JOIN turmas)
-WHERE id_turma = 8
+WHERE id_turma = 7
 
 --c. Contar o número de alunos em cada turma.
+SELECT id_turma, COUNT(id_aluno) AS Num_de_alunos FROM aluno_turma
+GROUP BY id_turma ORDER BY Num_de_alunos DESC

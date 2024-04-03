@@ -37,6 +37,8 @@ VALUES ('Gabriel', '2023-08-02','Devops',3),
 ('Luana', '2020-12-02','Assistente',5),
 ('Maria', '2021-08-09','Secretária',6),
 ('Valéria','2012-01-12', 'Gerente',1)
+INSERT INTO funcionarios (nome, admissao, cargo, id_depart)
+VALUES('Marcos','2022-01-12', 'Ajudante',1)
 	
 	
 SELECT * FROM departamentos
@@ -51,3 +53,8 @@ SELECT departamentos.nome, funcionarios.nome FROM departamentos
 LEFT JOIN funcionarios USING (id_depart)
 WHERE funcionarios.nome = 'Giovani'
 --c. Calcular o número total de funcionários gerenciados por cada gerente.
+SELECT gerente, AVG(subordinados) FROM -- Media(total) de func por gerente 
+(SELECT id_depart, COUNT(id_func) AS subordinados FROM funcionarios 
+WHERE cargo != 'Gerente' GROUP BY id_depart) -- total de func nao gerentes por setor 
+NATURAL INNER JOIN departamentos
+GROUP BY gerente 
