@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1712253662 source:c:\projetos\programas\c\crud\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
