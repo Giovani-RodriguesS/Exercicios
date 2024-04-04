@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     static void quickSort(int [] vetor, int begin, int end){
@@ -29,9 +31,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int [] vetor = {52,343,543,1,43,62,78,23,78,90};
+        Scanner in = new Scanner(System.in);
+        int quantidade;
 
-        quickSort(vetor,0,10);
+        System.out.println("Digite a quantidade de numeros para ordenar");
+        quantidade = in.nextInt();
+        int [] vetor = new int[quantidade];
+        for(int i=0;i<vetor.length;i++) {
+            System.out.println("Numero " + (i+1));
+            vetor[i] = in.nextInt();
+        }
+        quickSort(vetor,0,vetor.length);
         for (int number:vetor)
             System.out.print(number+", ");
     }
