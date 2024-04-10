@@ -22,7 +22,7 @@ body {
 }
 
 .visor {
-    height: 90px;
+    height: 115px;
     padding: 15px;
     color: #ffffffe0;
     text-align: right;
@@ -30,9 +30,21 @@ body {
 }
 
 .result {
+    height: 55px;
+    border-radius: 6px;
+    border: 1.5px solid #ffffffe0;
+    padding: 4px;
+}
+
+.subResult {
+    height: 25px;
     border-radius: 5px;
-    border: 2px solid #ffffffe0;
-    padding: 7px;
+    border: 1.5px solid #ffffffe0;
+    margin: 5px;
+    padding-right: 3px;
+    color: #ffffffe0;
+    text-align: right;
+    font-size: 16px;
 }
 
 .buttons {

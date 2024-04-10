@@ -1,46 +1,49 @@
 //  Var
 const result = document.querySelector('.result');
-const botton = document.querySelector('.buttons button');
+const subResult = document.querySelector('.subResult');
 
 //  stacks
 let numbers_stack = []
 let operator_stack =[]
 let number_complete = false
 let count = 1;
-result.value = ''
+result.value = '0'
 
 //  Functions
 
 // clear display
 function clearDisplay () {
     result.innerText = '0'
-    result.value = '';
+    result.value = '0';
     count = 1
     number_complete = false
 }
+    subResult.innerText = ''
 
 // botton
 function bottonNum (num) {
     if(number_complete)
         clearDisplay();
-    if(count < 10)
-    if (!(result.value == '0' && num == '0') && (num != ',' || result.value.indexOf(",") < 0))   
-        if(result.value == '0' && num != ",")
+    if(count < 11)
+    
+    if (!(result.value == '0' && num == '0') && (num != '.' || result.value.indexOf(".") < 0))   // deter 0 a esquerda e permitir apenas um .
+        if(result.value == '0' && num != ".") //  permitir apenas um . 
             result.innerText =  result.value = num;
         else
             result.innerText =  result.value += num;
         count++
+        subResult.innerText += num
 }
 
 // calculate
 function calculate () {
     addNumberToStack();
     let resultOfCalc=0
-    while (operator_stack.length()>0) {
+    while (operator_stack.length>0) {
         resultOfCalc = partCalc();
         addResultToStack(resultOfCalc);
     } 
-    result.innerText = result.valueOf = resultOfCalc;
+    result.innerText = result.value = resultOfCalc;
 }
 
 // PartialCalculate
@@ -50,7 +53,6 @@ function partCalc () {
     let op = operator_stack.pop();
     let resultOfCalc = eval(n1 + op + n2)
     return resultOfCalc;
-       
 }
 
 // Add number to number_stack
@@ -63,14 +65,15 @@ function addNumberToStack(){
 function operator (value) {
     if(!number_complete) {
         addNumberToStack()
-        while (operator_stack.length() > 0 && !precedence(topOfOperartorStack(), value)){
+        while (operator_stack.length > 0 && !precedence(topOfOperatorStack(), value)){
             let resultOfCalc = partCalc();
             addResultToStack(resultOfCalc);
+            result.innerText = resultOfCalc
         }
-    } else {
+    } else
         operator_stack.pop(value)
-    }
     addOperatorToStack(value)
+    subResult.innerText += value
 }
 
 // add operator to operator_stack
@@ -79,12 +82,13 @@ function addOperatorToStack(value) {
 }
 
 // precedence
-function precedence() {
+function precedence(op1, op2) {
     let operators = new Map([
         ['+',1],
         ['-',1],
         ['/',2],
         ['*',2],
+        ['**',3],
         ['(',3],
         [')',3]
     ])
@@ -92,7 +96,7 @@ function precedence() {
 }
 
 // top of operator_stack
-function topOfOperartorStack() {
+function topOfOperatorStack() {
     return operator_stack[operator_stack.length-1]
 }
 
@@ -100,4 +104,3 @@ function topOfOperartorStack() {
 function addResultToStack(number) {
     numbers_stack.push(number)
 }
-// 
