@@ -6,7 +6,7 @@ public class Carro {
     private int largura;
     private int altura;
     //construtor
-    public void Carro(String cor,int posX, int posY,int largura, int altura){
+    public Carro(String cor,int posX, int posY,int largura, int altura){
        this.cor = cor;
        this.posX = posX;
        this.posY = posY;

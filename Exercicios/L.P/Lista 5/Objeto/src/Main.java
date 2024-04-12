@@ -1,5 +1,7 @@
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Carro c1 = new Carro ("azul", 850, 250, 80, 200);
+        System.out.println(c1);
     }
 }
