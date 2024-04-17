@@ -14,18 +14,17 @@ public class Carro {
        this.altura = altura;
    }
 
-
     //metodos
     public void andarFrente(){
         if(posY > 0)
             posY--;
     }
     public void andarRe(){
-        if(posY < 1080-200)
+        if(posY < 1080-altura)
             posY++;
     }
     public void andarDireita(){
-        if(posX < 1920-80)
+        if(posX < 1920-largura)
             posX++;
     }
     public void andarEsquerda(){
