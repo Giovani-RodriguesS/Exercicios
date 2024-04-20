@@ -1,4 +1,30 @@
-//  Var
+//Bloco de escolha da função da calculadora
+
+const infixa = document.getElementById('infixa')
+const posfixa = document.getElementById('posfixa')
+const prefixa = document.getElementById('prefixa')
+
+   //Ouve as mudanças da checkbox
+infixa.addEventListener('change', function() {
+    if (this.checked) {
+       
+        alert(valorCheckbox)
+    } else {
+        alert('')
+    }
+})
+posfixa.addEventListener('change', function() {
+    // 3. Verifique se a caixa de seleção está marcada
+    if (this.checked) {
+        // 4. Obtenha o valor da caixa de seleção
+        const valorCheckbox = this.value;
+        alert(valorCheckbox)
+    } else {
+        alert('')
+    }
+})
+
+    //  Var 
 const result = document.querySelector('.result');
 const subResult = document.querySelector('.subResult');
 
@@ -6,46 +32,62 @@ const subResult = document.querySelector('.subResult');
 let numbers_stack = []
 let operator_stack =[]
 let number_complete = false
+let historicy = ''
 let count = 1;
 result.value = '0'
+subResult.value = ''
 
 //  Functions
 
 // clear display
-function clearDisplay () {
-    result.innerText = '0'
-    result.value = '0';
-    count = 1
-    number_complete = false
-}
-    subResult.innerText = ''
+function clearDisplay (arg) {
+    if(arg == 'a') {  // limpa o subdisplay quando pressionado o botao C
+       subResult.value = ''
+       subResult.innerText = ''
+    }
+    // limpa e zero o value do result
+result.innerText = '0' 
+result.value = '0';
+count = 1
+number_complete = false
 
+}
 // botton
 function bottonNum (num) {
+    // limpa a tela para digitar outro numero
     if(number_complete)
         clearDisplay();
-    if(count < 11)
     
+        // Limita o numero de algarismos
+        if(count < 11){
+   
+        // Validações de subResult 
     if (!(result.value == '0' && num == '0') && (num != '.' || result.value.indexOf(".") < 0))   // deter 0 a esquerda e permitir apenas um .
         if(result.value == '0' && num != ".") //  permitir apenas um . 
             result.innerText =  result.value = num;
         else
             result.innerText =  result.value += num;
         count++
-        subResult.innerText += num
+        
+        // Validações de subResult
+        if(num == '.' && subResult.value=='')
+            subResult.value = subResult.innerText = '0'+num
+        else if((num != '.' || subResult.value.indexOf(".") < 0)) // deter zero*
+                subResult.value = subResult.innerText += num
+    }
 }
 
 // calculate
 function calculate () {
-    addNumberToStack();
-    let resultOfCalc=0
-    while (operator_stack.length>0) {
-        resultOfCalc = partCalc();
-        addResultToStack(resultOfCalc);
-    } 
-    result.innerText = result.value = resultOfCalc;
+        addNumberToStack();
+        let resultOfCalc=0
+        while (operator_stack.length>0) {
+            resultOfCalc = partCalc();
+            addResultToStack(resultOfCalc);
+        } 
+        result.innerText = result.value = resultOfCalc;
+        historicy = result.value
 }
-
 // PartialCalculate
 function partCalc () {
     let n2 = numbers_stack.pop();
@@ -63,17 +105,22 @@ function addNumberToStack(){
 
 // 
 function operator (value) {
-    if(!number_complete) {
-        addNumberToStack()
-        while (operator_stack.length > 0 && !precedence(topOfOperatorStack(), value)){
-            let resultOfCalc = partCalc();
-            addResultToStack(resultOfCalc);
-            result.innerText = resultOfCalc
+        if(!number_complete) {
+            historicy = subResult.value
+            addNumberToStack()
+            while (operator_stack.length > 0 && !precedence(topOfOperatorStack(), value)){
+                let resultOfCalc = partCalc();
+                addResultToStack(resultOfCalc);
+                result.innerText = resultOfCalc
+
+            }
+        } else{
+            subResult.value = subResult.innerText = ''
+            subResult.value = historicy
+            operator_stack.pop(value)
         }
-    } else
-        operator_stack.pop(value)
-    addOperatorToStack(value)
-    subResult.innerText += value
+        addOperatorToStack(value)
+        subResult.innerText = subResult.value += value
 }
 
 // add operator to operator_stack

@@ -1,0 +1,112 @@
+* {
+    margin: 0px 5px;
+    padding: 0px;
+}
+body {
+    display: flex;
+    margin: 0;
+}
+.conteinerEsquerda {
+    position: sticky;
+    top: 0;
+    width: 40%;
+    height: 100vh;
+    margin: 0;
+    padding: 0px;
+}
+.conteinerDireita {
+    width: 50%;
+    height: fit-content;
+}
+.contador {
+    display: flex;
+    height: 40vh;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+.contadorTarefasConcluidas {
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+    padding: 8px 5px;
+    margin: 3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+}
+.novaTarefa {
+    height: 60vh;
+
+}
+.criarTarefa {
+    display: flex;
+    width: 80%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-width: 275px;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+.criarTarefa h4{
+    margin: 7px 5vw;
+}
+.digitarTexto {
+   text-align: start;
+    margin-bottom: 10px;
+    margin-left: 5vw;                                       
+    padding: 5px 4vw;
+    border-radius: 5px;
+}
+.enviar {
+    font-size: 16px;
+    margin: 10px auto 5px auto;
+    background-color: rgb(245, 245, 245);
+    padding: 5px;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+}
+.enviar:hover{
+     opacity: 0.5;
+     background-color: rgba(245, 245, 245, 0.58);
+}
+
+.criarTarefa h1 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+}
+.tarefa {
+    background-color: whitesmoke;
+    margin: 5px 10px 5px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+}
+.tarefa h1, h4{
+  padding: 10px 0 0 3vw;
+}
+
+.selecionarStatus {
+    display: flex;
+    margin: 0 0 10px 0;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    padding: 0 5%;
+
+}
+.apagarTarefa {
+    background-color: none;
+    width: 100%;
+    margin: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: black;
+}

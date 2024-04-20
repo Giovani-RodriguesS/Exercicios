@@ -22,11 +22,19 @@ body {
 }
 
 .visor {
-    height: 115px;
-    padding: 15px;
+    height: 135px;
+    padding: 12px;
     color: #ffffffe0;
     text-align: right;
     font-size: 40px;
+}
+.options {
+    display: flex;
+    justify-content:space-around;
+    font-size: 16px;
+    color: ffffffe0;
+    font-style: italic;
+    padding: 5px;
 }
 
 .result {

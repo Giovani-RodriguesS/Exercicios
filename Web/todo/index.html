@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="conteinerEsquerda">
+       
+        <div class="contador">
+            <div class="contadorTarefasConcluidas">
+                <h1>10</h1>
+                <p>Tarefas criadas</p>
+            </div>
+
+            <div class="contadorTarefasConcluidas">
+                <h1>20</h1>
+                <p>Tarefas em andamento</p>
+            </div>
+
+            <div class="contadorTarefasConcluidas">
+                <h1>5</h1>
+                <p>Tarefas concluídas</p>
+            </div>
+
+        </div>
+        
+        <div class="novaTarefa">
+            <div class="criarTarefa">
+                <h1>Vamos ao trabalho</h1>
+                
+                <h4>Insira sua tarefa</h4>
+                <input type="text" placeholder="Insira uma tarefa" class="digitarTexto">
+                
+                <h4>Insira a duração</h4>
+                <input type="text" placeholder="hh:mm:ss" class="digitarTexto">
+                <input type="submit" value="Criar" class="enviar">
+            </div>
+        </div>
+    </div>
+
+    <div class="conteinerDireita">
+        
+        <div class="tarefa">    
+            <h1>Tarefa</h1>
+            <h4>Duração: 00:15:00</h4>
+            <span class="selecionarStatus">
+                
+                <input type="radio" name="radio" value="Criado">
+                <p>Criado</p>
+                <input type="radio" name="radio" value="Em andamento"> 
+                <p>Em andamento</p>
+                <input type="radio" name="radio" value="Finalizada">
+                <p>Finalizada</p>
+            
+            </span>
+            <input class="apagarTarefa" type="button" value="Apagar tarefa">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
