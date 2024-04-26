@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliativa - André</title>
-    <link rel="stylesheet" href="style.css">
+    <title>DOM - Exercício</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
-        <label for="caixa1">caixa1</label>
-        <input type="text" name="caixa1" id="caixa1">
-        <label for="caixa2">caixa2</label>
-        <input type="text" name="caixa2" id="caixa2">
-        <label for="caixa3">caixa3</label>
-        <input type="text" name="caixa3" id="caixa3">
+    <div class="container">
+        <h1>Cadastro de Squads</h1>
+        <form action="#" id="squadForm">
+            <label for="squadName">Nome da Squad:</label>
+            <input type="text" name="squadName" id="squadName" required>
 
-        <input type="button" value="Pronto" id="BT" onclick="addElemento()">
-    </main>
+            <label for="squadLeader">Líder:</label>
+            <input type="text" name="squadLeader" id="squadLeader">
+            
+            <label for="squadMembers">Membros:</label>
+            <input type="text" name="squadMembers" id="squadMembers" >
+            
+            <input type="hidden" name="squadRow" id="squadRow">
+            <button id="squadSave" type="submit">Cadastrar Squad</button>
+        </form>
 
-        <table>
-            <td id="coluna1">
-                coluna1
-            </td>
-            <td id="coluna2">
-                coluna2
-            </td>
-            <td id="coluna3">
-                coluna3
-            </td>
-            <td >
-                <div>
-                    <input type="text" id="editar_remover">
-                    <input type="button" value="Edit" id="editar" onclick="editar()">
-                    <input type="button" value="rem" id="remover" onclick="remover()">
-                </div>
-            </td>
+        <h2>Squads cadastradas</h2>
+        <table id="squadTable">
+            <tr>
+                <th>Nome da Squad</th>
+                <th>Líder</th>
+                <th>Membros</th>
+                <th>Ações</th>
+            </tr>
         </table>
-
-    <script src="script.js"></script>
+    </div>
+    
 </body>
 </html>

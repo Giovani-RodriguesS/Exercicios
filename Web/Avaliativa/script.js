@@ -1,91 +1,91 @@
-// estilos na Main
-var main = document.querySelector('main')
-main.style.display = "flex";
-main.style.flexDirection = "column";
-main.style.alignItems = "center";
-main.style.marginTop = "50px";
+// formulario, tabela, botaoSave
+const squadForm = document.getElementById("squadForm");
+const squadTable = document.getElementById("squadTable");
+const squadButton = document.getElementById("squadSave");
 
-// variaveis inputs e tabela
-var caixa1 = document.querySelector('#caixa1')
-var caixa2 = document.querySelector('#caixa2')
-var caixa3 = document.querySelector('#caixa3')
-var elementosCriados = document.querySelector('#elementosCriados');
-var table = document.querySelector('table');
+//
+squadForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+        
+    //Entradas
+    const squadName = document.getElementById("squadName").value;
+    const squadLeader = document.getElementById("squadLeader").value;
+    const squadMembers = document.getElementById("squadMembers").value;
 
-// colunas
-var coluna1 = document.querySelector('#coluna1');
-var coluna2 = document.querySelector('#coluna2');
-var coluna3 = document.querySelector('#coluna3');
+    // Permitir edição
+    if (squadButton.textContent == "Salvar Alterações") {
+        //cancela a edição
+        if(event.submitter.textContent != "Cancelar"){
+                const row = document.getElementById("squadRow").value;
+        
+                squadTable.rows[row].cells[0].textContent = squadName;
+                squadTable.rows[row].cells[1].textContent = squadLeader;
+                squadTable.rows[row].cells[2].textContent = squadMembers;
+        }
 
-var i,j,k
-i=1
-j=1
-k=1
+        squadButton.textContent = "Cadastrar Squad";
+        document.getElementById("squadCancel").remove();
 
-coluna1.style.border = "1px solid #000"
-coluna2.style.border = "1px solid #000"
-coluna3.style.border = "1px solid #000"
+        document.getElementById("squadRow").value = "";
+        squadForm.reset();
+        return;
+    }
 
-// estilos tabela
-table.style.display = "flex"
-table.style.backgroundColor = "#f0f0f0"
-table.style.border = "2px solid #000"
-table.style.backgroundColor = "#f0f0f0"
-table.style.height = "100%"
-table.style.width = "100%"
-table.style.justifyContent = "center"
-table.style.padding = "20px"
-// estilos div elementos
-elementosCriados.style.height = "100px"
-elementosCriados.style.padding = "20px"
+    //add nova linha
+    const newRow = document.createElement("tr");
 
-valor = document.getElementById(editar_remover).value
+    const tdName = document.createElement("td");
+    const tdLeader = document.createElement("td");
+    const tdMembers = document.createElement("td");
 
-function remover () {
-    coluna1.removeChild("tr")
-    coluna2.removeChild("tr")
-    coluna3.removeChild("tr")
-}
+    tdName.appendChild(document.createTextNode(squadName));
+    tdLeader.appendChild(document.createTextNode(squadLeader));
+    tdMembers.appendChild(document.createTextNode(squadMembers));
 
-function addElemento() {
+    newRow.appendChild(tdName);
+    newRow.appendChild(tdLeader);
+    newRow.appendChild(tdMembers);
+
+    const tdAction = document.createElement("td");
+
+    const btEdit = document.createElement("button")
+    btEdit.textContent = "Editar";
     
-    var novaCaixa = document.createElement("tr");
+    btEdit.addEventListener("click", function () {
+        const row = this.closest("tr").rowIndex;
+        const squadName = squadTable.rows[row].cells[0].textContent;
+        const squadLeader = squadTable.rows[row].cells[1].textContent;
+        const squadMembers = squadTable.rows[row].cells[2].textContent;
 
-    if(caixa1.value != ''){
-            
-            novaCaixa.innerHTML = caixa1.value
-            novaCaixa.style.border = "1px solid #000"
-            novaCaixa.style.backgroundColor = "#fff"
-            novaCaixa.style.textAlign = "center"
-            novaCaixa.id = i
-            coluna1.appendChild(novaCaixa)
-            i++
-    }
+        document.getElementById("squadName").value = squadName;
+        document.getElementById("squadLeader").value = squadLeader;
+        document.getElementById("squadMembers").value = squadMembers;
 
-    if(caixa2.value != '' ){
-            
-            novaCaixa.innerHTML = caixa2.value
-            novaCaixa.style.border = "1px solid #000"
-            novaCaixa.style.backgroundColor = "#fff"
-            novaCaixa.style.textAlign = "center"
-            novaCaixa.id = j
-            coluna2.appendChild(novaCaixa)
-            j++
-    }
+        if (document.getElementById("squadRow").value == "") {
+            const btCancel = document.createElement("button")
+            btCancel.textContent = "Cancelar";
+            btCancel.id = "squadCancel";
+            squadForm.appendChild(btCancel);
+        }
 
-    if(caixa3.value != '' ){
-            
-            novaCaixa.innerHTML = caixa3.value
-            novaCaixa.style.border = "1px solid #000"
-            novaCaixa.style.backgroundColor = "#fff"
-            novaCaixa.style.textAlign = "center"
-            novaCaixa.id = k
-            coluna3.appendChild(novaCaixa)
-            k++
-    }
-    caixa1.value = ""
-    caixa2.value = ""
-    caixa3.value = ""
-        //alert(novaCaixa.value)
-   //elementosCriados.appendChild(novaCaixa)
-}
+        document.getElementById("squadRow").value = row;
+        squadButton.textContent = "Salvar Alterações";
+    })
+    
+    const btDelete = document.createElement("button")
+    btDelete.textContent = "Remover";
+    btDelete.addEventListener("click", function () {
+        if (confirm("Confirma a exclusão do cadastro desta SQUAD?")) {
+            squadTable.deleteRow(this.closest("tr").rowIndex);
+        }
+    });
+
+    tdAction.appendChild(btEdit);
+    tdAction.appendChild(btDelete);
+
+    newRow.appendChild(tdAction);
+
+    squadTable.appendChild(newRow);
+
+    squadForm.reset();
+})
