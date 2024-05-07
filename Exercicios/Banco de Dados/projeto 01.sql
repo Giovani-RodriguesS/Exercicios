@@ -167,7 +167,7 @@ VALUES ('1234567865x','555.555.555-55', 1),
 SELECT * FROM aluno
 SELECT * FROM disciplina
 SELECT * FROM disciplina_curso
-SELECT * FROM disciplina_aluno
+SELECT * FROM aluno_disciplina
 SELECT * FROM aluno_curso
 SELECT * FROM departamento
 SELECT * FROM contato
@@ -187,14 +187,35 @@ WHERE aluno.nome = 'Pedro';
 
 
 --Dado o RA ou o Nome do Aluno, buscar no BD todos os demais dados do aluno.
+SELECT * FROM aluno  -- seleciona dados da tabela aluno
+NATURAL INNER JOIN (SELECT nome AS curso FROM curso NATURAL INNER JOIN aluno_curso WHERE cpf = (SELECT cpf FROM aluno WHERE nome = 'João'))  
+					-- seleciona dados da tabela curso
+					NATURAL INNER JOIN
+					(SELECT nome AS disciplinas FROM disciplina NATURAL INNER JOIN aluno_disciplina WHERE cpf = (SELECT cpf FROM aluno WHERE nome = 'João')) 
+					 -- seleciona dados da tabela disciplina
+					NATURAL INNER JOIN
+					(SELECT contato FROM contato WHERE cpf = (SELECT cpf FROM aluno WHERE nome = 'João'))
+					 -- seleciona dados da contato
+WHERE nome = 'João'
+
 --Dado o nome de um departamento, exibir o nome de todos os cursos associados a ele.
+SELECT nome FROM curso
+			WHERE id_depart = (SELECT id_depart FROM departamento 
+								WHERE area = 'Saúde')
 --Dado o nome de uma disciplina, exibir a qual ou quais cursos ela pertence.
-
+SELECT nome FROM curso 
+	NATURAL INNER JOIN disciplina_curso 
+	WHERE id_disciplina = (SELECT id_disciplina FROM disciplina 
+							WHERE nome = 'Matemática')
 --Dado o CPF de um aluno, exibir quais disciplinas ele está cursando.
-
+SELECT nome FROM disciplina
+			NATURAL INNER JOIN aluno_disciplina WHERE cpf = '555.555.555-55'
+				  
 --Filtrar todos os alunos matriculados em um determinado curso.
 SELECT nome FROM aluno 
-WHERE
+			NATURAL INNER JOIN aluno_curso 
+			WHERE id_curso = (SELECT id_curso FROM curso WHERE nome = 'Medicina')
+
 --Filtrar todos os alunos matriculados em determinada disciplina.
 SELECT nome AS nome_disciplina, nome_aluno FROM 
 (SELECT nome AS nome_aluno 
