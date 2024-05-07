@@ -7,29 +7,33 @@
     <link rel="stylesheet" href="inss.css">
 </head>
 <body>
-    <main>    
+    <main>
+        <div class="title">
+            <h3>Calculadora INSS</h3>
+        </div>   
         <div class="inputs-label">
-            <label>Salário Bruto</label>
-            <input type="text">
+            <label for="Salario_Bruto">Salário Bruto</label>
+            <input id="Salario_Bruto" type="text">
         </div>
         <div class="inputs-label">
-            <label>Dependentes</label>
-            <input type="text">
+            <label for="Dependentes">Dependentes</label>
+            <input id="Dependentes" type="text">
+        </div>
+        <input id="send" type="button" value="Calcular">   
+        <div class="inputs-label">
+            <label for="Valor_Inss">Valor INSS</label>
+            <input id="Valor_Inss" type="text">
         </div>
         <div class="inputs-label">
-            <label>Valor INSS</label>
-            <input type="text">
+            <label for="Valor_Irrf">Valor IRRF</label>
+            <input id="Valor_Irrf" type="text">
         </div>
         <div class="inputs-label">
-            <label>Valor IRRF</label>
-            <input type="text">
+            <label for="Salario_Liquido">Salário Liquido</label>
+            <input id="Salario_Liquido" type="text">
         </div>
-        <div class="inputs-label">
-            <label>Salário Liquido</label>
-            <input type="text" name="">
-        </div>
-        
-        <input id="send" type="button" value="Calcular">    
+         
     </main>
+    <script src="inss.js" defer></script>
 </body>
 </html>
