@@ -174,17 +174,7 @@ SELECT * FROM contato
 SELECT * FROM curso
 
 
--- Querys
-SELECT aluno.nome, curso.nome FROM 
-(SELECT * FROM aluno NATURAL INNER JOIN aluno_curso)
-NATURAL INNER JOIN curso
-WHERE nome = 'Pedro' 
-
-SELECT * FROM aluno
-INNER JOIN aluno_curso ON aluno.cpf = aluno_curso.cpf
-INNER JOIN curso ON aluno_curso.id_curso = curso.id_curso
-WHERE aluno.nome = 'Pedro';
-
+-- Querys 
 
 --Dado o RA ou o Nome do Aluno, buscar no BD todos os demais dados do aluno.
 SELECT * FROM aluno  -- seleciona dados da tabela aluno
@@ -196,17 +186,19 @@ NATURAL INNER JOIN (SELECT nome AS curso FROM curso NATURAL INNER JOIN aluno_cur
 					NATURAL INNER JOIN
 					(SELECT contato FROM contato WHERE cpf = (SELECT cpf FROM aluno WHERE nome = 'João'))
 					 -- seleciona dados da contato
-WHERE nome = 'João'
+					WHERE nome = 'João'
 
 --Dado o nome de um departamento, exibir o nome de todos os cursos associados a ele.
 SELECT nome FROM curso
 			WHERE id_depart = (SELECT id_depart FROM departamento 
 								WHERE area = 'Saúde')
+								
 --Dado o nome de uma disciplina, exibir a qual ou quais cursos ela pertence.
 SELECT nome FROM curso 
 	NATURAL INNER JOIN disciplina_curso 
 	WHERE id_disciplina = (SELECT id_disciplina FROM disciplina 
 							WHERE nome = 'Matemática')
+							
 --Dado o CPF de um aluno, exibir quais disciplinas ele está cursando.
 SELECT nome FROM disciplina
 			NATURAL INNER JOIN aluno_disciplina WHERE cpf = '555.555.555-55'
