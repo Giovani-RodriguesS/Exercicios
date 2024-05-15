@@ -178,7 +178,7 @@ SELECT * FROM curso
 
 --Dado o RA ou o Nome do Aluno, buscar no BD todos os demais dados do aluno.
 SELECT * FROM aluno  -- seleciona dados da tabela aluno
-NATURAL INNER JOIN (SELECT nome AS curso FROM curso NATURAL INNER JOIN aluno_curso WHERE cpf = (SELECT cpf FROM aluno WHERE nome = 'João'))  
+NATURAL INNER JOIN (SELECT nome AS curso, RA FROM curso NATURAL INNER JOIN aluno_curso WHERE cpf = (SELECT cpf FROM aluno WHERE nome = 'João'))  
 					-- seleciona dados da tabela curso
 					NATURAL INNER JOIN
 					(SELECT nome AS disciplinas FROM disciplina NATURAL INNER JOIN aluno_disciplina WHERE cpf = (SELECT cpf FROM aluno WHERE nome = 'João')) 
