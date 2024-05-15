@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/Css/style.css">
-    <title>Calculadora</title>
+    <title>Calculadora Posfixa</title>
 </head>
 
 <body>
     <main class="calculator">
         <div class="visor">
             <div class="result">0</div>
+            <div class="options">
+                <input type="radio" id="infixa" name="opcao" >
+                <label for="infixa">infixa</label>
+
+                <input type="radio" id="posfixa"name="opcao" >
+                <label for="posfixa">posfixa</label>
+                
+            </div>
         </div>
         
         <div class="buttons">
@@ -39,7 +47,7 @@
             <button id="equal" class="bg-gray" onclick="calculate()">=</button>
 
         </div>
+        <script src="assets/JS/posfixa.js" defer></script>
     </main>
-    <script src="assets/JS/posfixa.js"></script>
 </body>
 </html>

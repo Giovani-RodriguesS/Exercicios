@@ -4,6 +4,8 @@
 //-5,2,+ = -3;
 
 //  escopo vars
+
+
 const result = document.querySelector('.result');
 let  stackNumber = []
 let stackOperator = []

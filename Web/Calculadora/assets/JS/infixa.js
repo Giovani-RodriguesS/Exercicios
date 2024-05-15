@@ -1,32 +1,29 @@
-//Bloco de escolha da função da calculadora
 
+//Bloco de escolha da função da calculadora
 const infixa = document.getElementById('infixa')
 const posfixa = document.getElementById('posfixa')
-const prefixa = document.getElementById('prefixa')
+//Ouve as mudanças da radio
+infixa.addEventListener('change', alter)
+posfixa.addEventListener('change', alter)
 
-   //Ouve as mudanças da checkbox
-infixa.addEventListener('change', function() {
-    if (this.checked) {
-       
-        alert(valorCheckbox)
-    } else {
-        alert('')
+
+function alter() {
+    if(infixa.checked)
+    {
+        document.getElementById('especialBt').innerText = "()"
+        document.getElementById('especialBt').value = "()"
     }
-})
-posfixa.addEventListener('change', function() {
-    // 3. Verifique se a caixa de seleção está marcada
-    if (this.checked) {
-        // 4. Obtenha o valor da caixa de seleção
-        const valorCheckbox = this.value;
-        alert(valorCheckbox)
-    } else {
-        alert('')
+    else
+    {   
+        document.getElementById('especialBt').innerText = "Enter"
+        document.getElementById('especialBt').value = ""
     }
-})
+}
 
     //  Var 
 const result = document.querySelector('.result');
 const subResult = document.querySelector('.subResult');
+
 
 //  stacks
 let numbers_stack = []

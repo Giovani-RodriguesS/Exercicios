@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/Css/style.css">
-    <title>Calculadora</title>
+    <title>Calculadora Infixa</title>
 </head>
 
 <body>
@@ -14,19 +14,17 @@
             <div class="subResult"></div>
             <div class="result">0</div>
             <div class="options">
-                <input type="checkbox" id="infixa" name="infixa" >
+                <input type="radio" id="infixa" name="option">
                 <label for="infixa">infixa</label>
 
-                <input type="checkbox" id="posfixa"name="posfixa" >
+                <input type="radio" id="posfixa"name="option">
                 <label for="posfixa">posfixa</label>
                 
-                <input type="checkbox" id="prefixa" name="prefixa" >
-                <label for="prefixa">préfixa</label>
             </div>
         </div>
         
         <div class="buttons">
-            <button class="bg-gray" onclick="operator('()')">()</button>
+            <button id="especialBt" class="bg-gray">()</button>
             <button class="bg-gray" onclick="operator('**')">^</button>
             <button class="bg-gray" onclick ="clearDisplay('a')" >C</button>
             <button class="bg-gray" onclick="operator('/')">/</button>
@@ -51,7 +49,7 @@
             <button id="equal" class="bg-gray" onclick="calculate()">=</button>
 
         </div>
+        <script src="assets/JS/infixa.js"></script>
     </main>
-    <script src="assets/JS/script.js"></script>
 </body>
 </html>
