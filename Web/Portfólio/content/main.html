@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="../assets/CSS/style.css">
+</head>
+<body>
+    <header><h1>Portfólio Semestral</h1></header>
+    <div class="main">    
+        <nav>
+            <h3 onclick="alterPag('./MC.html')">Metodologia Científica</h3>
+            <h3 onclick="alterPag('./BD.html')">Banco de Dados</h3>
+            <h3 onclick="alterPag('./LP.html')">Linguagem de Programação</h3>
+            <h3 onclick="alterPag('./CD.html')">Ciencia de Dados</h3>
+            <h3 onclick="alterPag('./DW.html')">Desenvolvimento Web</h3>
+            <h3 onclick="alterPag('./AI.html')">Automação Industrial</h3>
+        </nav>
+        <iframe id="iframe" src="" frameborder="0" ></iframe>
+    </div> 
+    <script defer>
+        const iframe = document.getElementById('iframe');
+        function alterPag (pagina)
+        {
+            iframe.src = pagina;
+        }</script>
+</body>
+</html>
