@@ -147,6 +147,15 @@ public class Screensaver extends javax.swing.JFrame implements Runnable{
         Graphics g = getBufferStrategy().getDrawGraphics();
 
         // Instancie suas formas geométricas aqui
+        Shape s1; // variavel do tipo Shape
+        Rectangle r = new Rectangle();
+        Rectangle r2 = new Rectangle(200, 150);
+        Rectangle r3 = new Rectangle(Color.BLACK,20, 25, 1, -2, 200, 150);
+
+
+        System.out.println(r);
+        System.out.println(r2);
+        System.out.println(r3);
 
 
 
@@ -158,6 +167,13 @@ public class Screensaver extends javax.swing.JFrame implements Runnable{
             g.clearRect(0, 0, getWidth(), getHeight());
 
             // Implemente sua animação aqui.
+            r.draw(g);
+            r.move(width, height);
+            r2.draw(g);
+            //r2.move();
+            r3.draw(g);
+            //r3.move();
+
 
 
             // Exibe a tela

@@ -1,12 +1,12 @@
 import java.awt.*;
 import java.util.Random;
 
-public class Shape extends {
+public abstract class Shape {
     private Color color;
-    private double X;
-    private double Y;
-    private double speedY;
-    private double speedX;
+    private int X;
+    private int Y;
+    private int speedY;
+    private int speedX;
 
     Random r = new Random();
 
@@ -16,7 +16,13 @@ public class Shape extends {
         this.Y = r.nextInt(256);
         this.speedY = r.nextInt(10)+1;
         this.speedX = r.nextInt(10)+1;
-
+    }
+    public Shape (Color color, int X, int Y, int speedX, int speedY ){
+        this.speedY = speedY;
+        this.color = color;
+        this.speedX = speedX;
+        this.Y = Y;
+        this.X = X;
     }
 
     private Color colorGenerate() {
@@ -24,29 +30,30 @@ public class Shape extends {
         return c;
     }
 
-    public void move () {
-        this.Y = speedY;
-        this.X = speedX;
+    public void move (int screenWidth, int screenHeight) {
+        this.Y += speedY;
+        this.X += speedX;
 
     }
+    public abstract void draw (Graphics g);
 
     public Color getColor() {
         return color;
     }
 
-    public double getX() {
+    public int getX() {
         return X;
     }
 
-    public double getY() {
+    public int getY() {
         return Y;
     }
 
-    public double getSpeedY() {
+    public int getSpeedY() {
         return speedY;
     }
 
-    public double getSpeedX() {
+    public int getSpeedX() {
         return speedX;
     }
 
@@ -54,22 +61,19 @@ public class Shape extends {
         this.color = color;
     }
 
-    public void setX(double x) {
+    public void setX(int x) {
         X = x;
     }
 
-    public void setY(double y) {
+    public void setY(int y) {
         Y = y;
     }
 
-    public void setSpeedY(double speedY) {
+    public void setSpeedY(int speedY) {
         this.speedY = speedY;
     }
 
-    public void setSpeedX(double speedX) {
+    public void setSpeedX(int speedX) {
         this.speedX = speedX;
-    }
-    //public abstract void draw (Graphics g){
-
     }
 }
