@@ -4,71 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metodologia Científica</title>
-    <style>
-        body{
-            background-color: whitesmoke;
-            margin: 0px;
-            padding: 0px;
-        }
-        h1 {
-            text-align: center;
-            margin: 5px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        h2, h3, ul, p {
-            margin-left: 10px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        p {
-            margin: 0px 40px;
-            padding: 0px;
-        }
-        code {
-            display: flex;
-            justify-content: center;
-            margin: 12px;
-            padding: 5px;
-            color: rgb(31, 31, 206);
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/CSS/content.css">
 </head>
 <body>
     <h1>Metodologia Científica</h1>
-    <h3>Resumo<h3>
+    <h3>Tópicos<h3>
     <ul>Currículo Lattes</ul>
     <ul>Banner</ul>
     <ul>Pitch</ul>
     <ul>Plágio</ul>
     <ul>Artigo</ul>
 
-    <h2>Variáveis</h2>
-        <p>Em Java, aprendemos sobre <b>variáveis</b>, que são espaços na memória reservados para armazenar dados, e os tipos de dados, tal como: <i>Int</i>, <i>Boolean</i> e <i>Double</i>.</p>
-        <code>boolean condicional = True; </code>
-        <p>Além disso, vimos que cada tipo de dado tem uma quantidade de bits, sendo que Boolean é a mais leve (1 bit) e Long e Double, os mais pesados (64 bits).</p>
-    <h2>Estruturas de Decisão</h2>
-        <p>Nessa etapa, vimos a estrutura <b>If/Else</b>. If verifica se a condição é verdadeira, se for, executa seu o bloco de código. Se não for, o bloco de Else será executado.</p>
-        <code>if(4 < num1){ // condição </code>
-        <code>// codigo de If <br> }</code>
-        <code>else{</code>
-        <code>//codigo de Else <br> }</code>
-        <p>Também há outra estrutura de decisão, chamada <b>Switch</b>. Usamos quando não queremos encadear vários if/else seguidos, a fim de deixar o código mais legível.</p>
-        <code>switch(//valor analisado){ <br> case 1: //bloco de instrução <br> break; <br>default: //bloco de instrução <br> break; <br> }</code>
-        <code></code>
+    <h2>Currículo Lattes</h2>
+        <p>A primeira atividade da matéria metodologia científica foi a criação de um currículo Lattes. Lattes é uma plataforma direcionada a pesquisadores
+             e estudantes que desejam montar um currículo no qual contenha suas experiências profissionais e acâdemicas, dando enfase a pesquisas científicas.
+             Grandes instituições, universidades e faculdades utilizam o Lattes.
+             Uma curiosidade é que esse nome é em homenagem ao pesquisador brasileiro César Lattes.</p>
+        <p>O principal orgão fomentador é o CNPq, Conselho Nacional de Desenvolvimento Científico e Tecnológico, que também é o maior responsável por apoiar a pesquisa e desenvolvimento tecnólogico no Brasil.</p>
+    <h2>Banner</h2>
+        <p>Essa foi uma atividade que visava desenvolver um banner técnico científico.
+         Nele, apresentamos algumas informações sobre nosso tema de pesquisa: Alucinações em LLM. Segue uma ilustração de como ficou o nosso trabalho:</p>
+        <img id="imgBanner" src="../assets/images/Banner.png" alt="banner">
     
-    <h2>Estruturas de Repetição</h2>
-        <p>Os laços de repetição são muito úteis para fazer algo repetidas vezes sem precisar reescrever código. Um deles é o <b>For</b> que tem esta sintaxe:</p>
-        <code>for(i=0;i<3;i++) {//bloco codigo}</code>
-
-        <p>Outra estrutura é a <b>While</b>. Ela tem uma sintaxe mais simples que o For, mas precisa-se tomar cuidado para que o programa não caiu em looping infinito. Segue sua sintaxe:</p>
-        <code>while(i<5) { //aqui vem o codigo }</code>
-
-        <p>Uma variação do While é <b>Do/While</b>, que executa pelo menos uma vez o código e, em seguida, avalia a condição do laço. Sua sintaxe é: </p>
-        <code>do { //aqui vai o código } while(i<5)</code>
-    <h2>Vetores</h2>
-        <p>Essas são variáveis que reservam espaços da memória que podem alocar diversos valores do mesmo tipo em sequencia. Para acessar os valores é preciso dizer o nome da variavel e o indice. Exemplo:</p>
-        <code>int [] vetor = {4,5,6}; <br> vetor[0] // Aqui está o valor '4'</code>
-    <h2>Funções</h2>
-        <p>Por fim, vimos sobre funções, que são bloco de instrução que executam seu código quando invocadas. Elas podem ter parâmetros e retorno. Segue um exemplo:</p>
-        <code>(// tipo de retorno e dois parâmetros<br> int somar(int n1, int n2) { <br> // retorno<br>return n1 + n2; <br> } </code>
+    <h2>Pitch/Plágio</h2>
+       <p>Nessa terceira atividade, gravamos um pitch de três minutos,
+         onde apresentamos de forma resumida os <i>insights</i> das nossas pesquisas relacionadas a Alucinação em LLM.</p>
+        <p>Junto do pitch, tivemos outra atividade, porém essa foi bem simples,
+             pois era necessário apenas compartilhar uma boa prática para evitar o plágio acadêmico.</p>
+    <h2>Artigo</h2>
+        <p>O artigo foi nossa última atividade. Aqui, pudemos expor vários de nossos insights. Segue um pequeno trecho:</p>
+        <br>
+        <p><b><i>(...) Assim, verificamos que, à medida que a inteligência artificial continua avançando, novas pesquisas e estudos a respeito da qualidade das suas respostas precisam, de igual modo, progredir.
+             A erradicação de alucinações em modelos de linguagem grande (LLM) ainda está distante de ser alcançada, pois, além dos problemas abordados, existem outros fatores que podem levar o modelo a alucinar(...) </i><b></p>
+        <footer>2024 &COPY</footer>
 </body>
 </html>

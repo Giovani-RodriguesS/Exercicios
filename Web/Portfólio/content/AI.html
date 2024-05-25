@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Automação Industrial</title>
+    <link rel="stylesheet" href="../assets/CSS/content.css">
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis, urna faucibus rutrum viverra, purus purus sodales elit, in luctus magna dolor non quam. Praesent eget porta lorem. Donec sapien sapien, dapibus sit amet elit ut, consequat vestibulum urna. Nulla molestie, justo eget posuere pharetra, nibh quam congue orci, a imperdiet sapien arcu nec libero. Pellentesque turpis nisl, tempus vitae interdum in, varius nec eros. Mauris arcu augue, egestas condimentum vestibulum id, vulputate eget ipsum. Nulla eu urna a magna venenatis viverra non vitae purus. Pellentesque condimentum luctus ligula, at dignissim ante dictum eu. Aliquam eu commodo felis. Sed luctus interdum nisi at fermentum. Morbi eleifend massa vitae dictum consectetur. </h1>
+    <h1>Automação Industrial</h1>
+    <h3>Tópicos<h3>
+    <ul>Arduino</ul>
+    <ul>Esp32</ul>
+
+    <h2>Arduino</h2>
+        <p>No início do semestre, tivemos contato com o sistema embarcado Arduino.
+             Para fins didáticos, usamos a plataforma TinkerCad, e nela aprendemos a utilizar alguns dispositivos controlados pelo embarcado, como o Buzzer, Led RGB e botões.
+            Na programar usamos a linguagem C++. 
+        </p>
+        <br>
+        <img id="imgArduino" src="../assets/images/arduino.jpg" alt="arduino">
+        <p>Alguns conceitos abordados nas aulas foram: </p>
+        <ul><b>DigitalWrite()</b> - Para saida de sinal do arduino para um pino específico;</ul>
+        <ul><b>DigitalRead()</b> - Para ler o estado de um pino digital;</ul>
+        <ul><b>AnalogWrite()</b> - Para saida analogica num pino específico;</ul>
+        <p>Além desses, ainda tivemos contato com o <b>monitor Serial</b>, uma ferramenta útil para verificar: estado do botão, potência do potenciomêtro e até a temperatura de um sensor de temperatura.</p>
+        <ul><b>Serial.begin(9600)</b> - Definimos no Setup para iniciarmos o monitor serial. Obs: 9600 é a taxa de transmissão.</ul>
+
+    <h2>Esp32</h2>
+      <p>O microcontrolador ESP32 foi outro dispositivo que vimos nas aulas. 
+        Porém, mesmo sendo raso o contato que tivemos com ele, tivemos uma avaliação, onde desenvolvemos um programa que imprimia no display do LCD as opções (contar toques, relógio e zerar dados).</p>
+        <br>
+        <img id="imgEsp" src="../assets/images/esp32.jpg" alt="esp32">
+        <p>Alguns conceitos abordados nas aulas foram: </p>
+        <ul><b>LCD setCursor()</b> - Para definir a posição do cursor no display;</ul>
+        <ul><b>LCD clear()</b> - Para limpar todas as informações do display;</ul>
+        <ul><b>LCD print()</b> - Para inserir informações no display;</ul>
+        <br>
+        <p>Link para o repositório das atividades:<a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/Aut.%20Industrial">repositório github</a></p>
+    <footer>2024 &COPY</footer>
 </body>
 </html>

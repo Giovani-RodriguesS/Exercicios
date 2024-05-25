@@ -1,0 +1,118 @@
+body{
+    background-color: #f5f5f5;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    text-align: center;
+    background-color: hsla(0, 0%, 66%, 0.74);
+    border-bottom:#000 solid 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin: 0px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2, h3, ul, p {
+    margin-left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+    margin: 0px 40px;
+    padding: 0px;
+}
+footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: black;
+}
+code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    margin: 7px 0px;    
+}
+img {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+#imgBanner {
+    position: relative;
+    left: 40%;
+    height: 370px;
+    width: 250px;
+    border-radius: 3px;
+}
+#imgArduino {
+    position: relative;
+    left: 40%;
+    height: 250px;
+    width: 250px;
+    border-radius: 3px;
+}
+#imgEsp {
+    position: relative;
+    left: 40%;
+    height: 250px;
+    width: 250px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+#imgIf {
+    position: relative;
+    left: 38%;
+    height: 190px;
+    width: 300px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+#imgSwitch {
+    margin-top: 6px;
+    position: relative;
+    left: 38%;
+    height: 190px;
+    width: 300px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+#imgOp {
+    margin-top: 6px;
+    position: relative;
+    left: 33%;
+    height: 250px;
+    width: 450px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+#imgFor {
+    margin-top: 6px;
+    position: relative;
+    left: 38%;
+    width: 300px;
+    height: 100px;
+    
+}
+#imgWhile {
+    margin-top: 6px;
+    position: relative;
+    left: 36%;
+    width: 350px;
+    height: 200px;
+}
+#imgVetor {
+    margin-top: 6px;
+    position: relative;
+    left: 37%;
+    width: 320px;
+    height: 230px;
+}
+#imgFunc {
+    margin: 7px 0px;
+    position: relative;
+    left: 37%;
+    width: 270px;
+    height: 140px;
+}

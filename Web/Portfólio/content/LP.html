@@ -4,38 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linguagem de Programação</title>
-    <style>
-        body{
-            background-color: whitesmoke;
-            margin: 0px;
-            padding: 0px;
-        }
-        h1 {
-            text-align: center;
-            margin: 5px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        h2, h3, ul, p {
-            margin-left: 10px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        p {
-            margin: 0px 40px;
-            padding: 0px;
-        }
-        code {
-            display: flex;
-            justify-content: center;
-            margin: 12px;
-            padding: 5px;
-            color: rgb(31, 31, 206);
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/CSS/content.css">
 </head>
 <body>
     <h1>Linguagem de Programação</h1>
     <h2>Programação em Java</h2>
-    <h3>Resumo<h3>
+    <h3>Tópicos<h3>
     <ul>Variáveis</ul>
     <ul>Estruturas de Decisão</ul>
     <ul>Estruturas de Repetição</ul>
@@ -46,30 +20,57 @@
         <p>Em Java, aprendemos sobre <b>variáveis</b>, que são espaços na memória reservados para armazenar dados, e os tipos de dados, tal como: <i>Int</i>, <i>Boolean</i> e <i>Double</i>.</p>
         <code>boolean condicional = True; </code>
         <p>Além disso, vimos que cada tipo de dado tem uma quantidade de bits, sendo que Boolean é a mais leve (1 bit) e Long e Double, os mais pesados (64 bits).</p>
+    <h2>Operadores</h2>
+        <p>Há também os operadores do Java. Seus tipos podem ser: lógico, atribuição, aritmético, condicional e ternário. Esse primeiro é usado para quando precisamos verificar dois ou mais testes lógicos.
+             Já o aritmético é usado para cálculos e concatenação. O de atribuição é para atribuir valor a uma variável.
+              Os operadores condicional são para verificar condições entre dois elementos. Por fim, o operador ternário é para comparações simples que executa uma instrução se verdadeiro ou outra instrução, caso falso.</p>  
+            <img id="imgOp" src="../assets/images/Operadores.png" alt="ilustração operadores">
+          <br>
+    
+        <p>Link para o repositório das atividades da lista1: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/L.P/Lista1">lista1</a></p>
+    
     <h2>Estruturas de Decisão</h2>
         <p>Nessa etapa, vimos a estrutura <b>If/Else</b>. If verifica se a condição é verdadeira, se for, executa seu o bloco de código. Se não for, o bloco de Else será executado.</p>
-        <code>if(4 < num1){ // condição </code>
-        <code>// codigo de If <br> }</code>
-        <code>else{</code>
-        <code>//codigo de Else <br> }</code>
-        <p>Também há outra estrutura de decisão, chamada <b>Switch</b>. Usamos quando não queremos encadear vários if/else seguidos, a fim de deixar o código mais legível.</p>
-        <code>switch(//valor analisado){ <br> case 1: //bloco de instrução <br> break; <br>default: //bloco de instrução <br> break; <br> }</code>
-        <code></code>
-    
+        <img id="imgIf" src="../assets/images/if_else.png" alt="ilustração de if/else">
+        <p>Aqui, o valor 4 está sendo analisado. Se ele for menor que num1(variavel), o if será executado. Se não, o else será executado.</p>
+        
+        <br>
+
+        <p>Também há outra estrutura de decisão, chamada <b>Switch</b>. Usamos quando não queremos encadear vários if/else seguidos. Segue um exemplo</p>
+        <img id="imgSwitch" src="../assets/images/switch.png" alt="ilustração de switch">
+        <p>O exemplo mostra que se valor(valor analisado) for 1, o case 1 será satisfeito e encerrará as verificações (break). Se nenhum case for satisfeito, o default será executado.</p>
+        <br>
+        
+
+        <p>Link para o repositório das atividades da lista2: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/L.P/Lista%202">lista2</a></p>
     <h2>Estruturas de Repetição</h2>
         <p>Os laços de repetição são muito úteis para fazer algo repetidas vezes sem precisar reescrever código. Um deles é o <b>For</b> que tem esta sintaxe:</p>
-        <code>for(i=0;i<3;i++) {//bloco codigo}</code>
+        <img id="imgFor" src="../assets/images/for.png" alt="ilustração de for">
+        <p>Ele é muito usado quando queremos evitar looping infinito, pois, logo depois do for,
+             há um colchetes que receberá: variável de controle, teste lógico e incremento ou decremento.</p>
 
+        <br>
         <p>Outra estrutura é a <b>While</b>. Ela tem uma sintaxe mais simples que o For, mas precisa-se tomar cuidado para que o programa não caiu em looping infinito. Segue sua sintaxe:</p>
-        <code>while(i<5) { //aqui vem o codigo }</code>
 
         <p>Uma variação do While é <b>Do/While</b>, que executa pelo menos uma vez o código e, em seguida, avalia a condição do laço. Sua sintaxe é: </p>
-        <code>do { //aqui vai o código } while(i<5)</code>
+        <img id="imgWhile" src="../assets/images/while.png" alt="ilustração de while">
+        
+        <br>
+        <p>Link para o repositório das atividades da lista3: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/L.P/Lista%203">lista3</a></p>
     <h2>Vetores</h2>
-        <p>Essas são variáveis que reservam espaços da memória que podem alocar diversos valores do mesmo tipo em sequencia. Para acessar os valores é preciso dizer o nome da variavel e o indice. Exemplo:</p>
-        <code>int [] vetor = {4,5,6}; <br> vetor[0] // Aqui está o valor '4'</code>
+        <p>Essas são variáveis que reservam espaços da memória que podem alocar diversos valores do mesmo tipo em sequência. Para acessar os valores é preciso dizer o nome da variavel e o indice no qual se encontra o valor buscado. Exemplo:</p>
+        <img id="imgVetor" src="../assets/images/Vetor e Matriz.png" alt="">
+        <br>
+        <p>Link para o repositório das atividades da lista4: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/L.P/Lista%204">lista4</a></p>
     <h2>Funções</h2>
-        <p>Por fim, vimos sobre funções, que são bloco de instrução que executam seu código quando invocadas. Elas podem ter parâmetros e retorno. Segue um exemplo:</p>
-        <code>(// tipo de retorno e dois parâmetros<br> int somar(int n1, int n2) { <br> // retorno<br>return n1 + n2; <br> } </code>
+        <p>Ainda vimos sobre funções, que são bloco de instrução que executam seu código quando invocadas. Elas podem ter parâmetros e um tipo de retorno. Segue um exemplo:</p>
+        <img src="../assets/images/Função.png" alt="ilustração Função" id="imgFunc">
+        <p>Uma grande vantagem da função é que você pode escrevê-la em outro lugar do programa e depois chamá-la para 
+            a Main, onde roda o programa. Outra vantagem é a recursividade, que nada mais é do que chamar a função nela mesmo.
+             Esse recurso é capaz de aumentar a velocidade de execução e reduz linhas de código.</p>
+        <br>
+        <p>Link para o repositório das atividades da lista5: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/L.P/Lista%205">lista5 </a></p>
+    <h2>Programação Orientada a Objeto</h2>
+        <p></p>
 </body>
 </html>
