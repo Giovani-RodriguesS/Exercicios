@@ -10,22 +10,27 @@ h1 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     margin: 0px;
     padding: 5px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h2, h3, ul, p {
     margin-left: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 p {
     margin: 0px 40px;
     padding: 0px;
 }
 footer {
+    margin-top: 15px;
     height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     color: #fff;
     background-color: black;
 }
@@ -38,81 +43,135 @@ code {
 }
 img {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 20px;
+    margin: 40px 0px;
+    position: relative;
+}
+.projetosAutInd {
+    left: 10%;
+    height: 440px;
+    width: 750px;
 }
 #imgBanner {
-    position: relative;
+    
     left: 40%;
     height: 370px;
     width: 250px;
-    border-radius: 3px;
 }
 #imgArduino {
-    position: relative;
+    
     left: 40%;
     height: 250px;
     width: 250px;
-    border-radius: 3px;
 }
 #imgEsp {
-    position: relative;
+    
     left: 40%;
     height: 250px;
     width: 250px;
-    border-radius: 4px;
-    margin-bottom: 7px;
 }
 #imgIf {
-    position: relative;
+    
     left: 38%;
     height: 190px;
     width: 300px;
-    border-radius: 4px;
-    margin-bottom: 7px;
 }
 #imgSwitch {
-    margin-top: 6px;
-    position: relative;
+    
     left: 38%;
     height: 190px;
     width: 300px;
-    border-radius: 4px;
     margin-bottom: 7px;
 }
 #imgOp {
-    margin-top: 6px;
-    position: relative;
+    
     left: 33%;
     height: 250px;
     width: 450px;
-    border-radius: 4px;
     margin-bottom: 7px;
 }
 #imgFor {
-    margin-top: 6px;
-    position: relative;
+    
     left: 38%;
     width: 300px;
     height: 100px;
     
 }
 #imgWhile {
-    margin-top: 6px;
-    position: relative;
+    
     left: 36%;
     width: 350px;
     height: 200px;
 }
 #imgVetor {
-    margin-top: 6px;
-    position: relative;
+    
     left: 37%;
     width: 320px;
     height: 230px;
 }
 #imgFunc {
-    margin: 7px 0px;
-    position: relative;
+    
     left: 37%;
-    width: 270px;
+    width: 300px;
     height: 140px;
+}
+#imgModelagem {
+    
+    left: 33%;
+    width: 450px;
+    height: 400px;
+}
+#imgDER {
+    
+    left: 36%;
+    width: 370px;
+    height: 240px;
+    
+}
+#imgSQL {
+    left: 36%;
+    width: 370px;
+    height: 140px;
+}
+#imgMongo {
+    
+    left: 36%;
+    width: 320px;
+    height: 300px;
+}
+#imgPOO {
+    
+    left: 34%;
+    width: 400px;
+    height: 340px;
+}
+#imgScreensaver {
+    
+    left: 36%;
+    width: 300px;
+    height: 240px;
+}
+#imgAmostra_E {
+    
+    left: 30%;
+    width: 450px;
+    height: 390px;
+}
+#imgMediana {
+    
+    left: 27%;
+    width: 520px;
+    height: 370px;
+}
+#imgMedidaDisp {
+    
+    left: 30%;
+    width: 420px;
+    height: 220px;
+}
+#imgQuiQuadrado{
+    
+    left: 21%;
+    width: 620px;
+    height: 420px;
 }

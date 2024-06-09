@@ -1,0 +1,128 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to bottom, #F5F5F5, rgba#efeeeec9);
+}
+header {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(112, 128, 144);
+    border-bottom:#000 solid 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin: 0px 0px 30px 0px;
+    padding: 10px;
+    height: 140px; 
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-family: "Poppins", sans-serif;
+}
+h2, h3 {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 25vw;
+    padding: 10px 0px;
+    position: relative;
+    left: 37%;
+}
+h2, h3, p {
+    text-align: center;
+    margin: 20px 0px 10px 10px;
+    font-family: 'Roboto', sans-serif;
+}
+img {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 20px;
+    margin: 0px 0px;
+    position: relative;
+}
+main img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+footer {
+    margin-top: 15px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #fff;
+    background-color: black;
+}
+.projects {
+    background-color: #aaaeb0dc;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 20px;
+    width: 60vw;
+    margin: 0px 10px 10px 10px;
+    position: relative;
+    left: 17%;
+    padding: 25px;
+    border-bottom: #000 solid 1px;
+}
+.projects p {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    max-width: 60%;
+    position: relative;
+    left: 20%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #fff;
+    border-bottom: #000 solid 1px;
+}
+
+#home {
+    top: 25px;
+    position: sticky;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+}
+#home:hover {
+    transition: 100ms linear;
+    opacity: 0.3;
+}
+
+#imgModelagem {
+    width: 450px;
+    height: 400px;
+}
+#imgDER {
+    width: 370px;
+    height: 240px;
+    
+}
+#imgSQL {
+    width: 370px;
+    height: 140px;
+}
+#projeto1 {
+    width: 710px;
+    height: 400px;
+}
+#imgMongo {
+    width: 320px;
+    height: 300px;
+    background-color: #fff;
+}
+#github {
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+}
+#github:hover {
+    transition: 300ms linear;
+    transform: scale(1.1);
+}

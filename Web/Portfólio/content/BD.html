@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Banco de Dados</title>
+    <link rel="stylesheet" href="../assets/CSS/styleBD.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis, urna faucibus rutrum viverra, purus purus sodales elit, in luctus magna dolor non quam. Praesent eget porta lorem. Donec sapien sapien, dapibus sit amet elit ut, consequat vestibulum urna. Nulla molestie, justo eget posuere pharetra, nibh quam congue orci, a imperdiet sapien arcu nec libero. Pellentesque turpis nisl, tempus vitae interdum in, varius nec eros. Mauris arcu augue, egestas condimentum vestibulum id, vulputate eget ipsum. Nulla eu urna a magna venenatis viverra non vitae purus. Pellentesque condimentum luctus ligula, at dignissim ante dictum eu. Aliquam eu commodo felis. Sed luctus interdum nisi at fermentum. Morbi eleifend massa vitae dictum consectetur. </h1>
+    <header>
+        <h1>Banco de Dados</h1>
+    </header>
+    <a href="../content/main.html"><img id="home" src="../assets/images/icons/home icon.jpg" alt="home"></a>
+    
+    <main>
+    
+        <h2>Modelagem de dados</h2>
+            <div class="projects">
+                <p>No início da disciplina, conhecemos a modelagem de dados, que é a forma como iremos representar os dados no sistema do banco de dados.</p>
+                <p>Primeiro, devemos conhecer o modelo de negócio, depois conceitualizar com o Diagrama Entidade Relacionamento,
+                 em seguida elaborar o modelo lógico e por fim transformar em código SQL.</p>
+                 <img id="imgModelagem" src="../assets/images/BD/modelagem.webp" alt="ilustração modelagem de dados">
+                 <p><b>Modelo de Negócio</b> recolhemos informações de com deverá se comportar o banco de dados;</p>
+                 <p><b>Modelo Conceitual</b> desenvolvemos o diagrama entidade relacionamento, que será base para conseguirmos estabalecer relacionamento entre as entidades do banco de dados;</p>
+                 <p><b>Modelo Lógico</b> transformamos o conceito em tabelas;</p>
+                 <p><b>Modelo Físico</b> transcrevemos a lógica em código SQL.</p>
+            </div>
+        <h2>Diagrama ER</h2>
+            <div class="projects">
+                <p>O Diagrama Entidade Relacionamento é usado para nos ajudar a enxergar como cada entidade irá se relacionar com outra no banco de dados. Também usamos convensões para nos auxiliar na identificação de elementos e informações no diagrama. Segue um exemplo de Diagrama ER:</p>
+                <img id="imgDER" src="../assets/images/BD/Diagrama ER.png" alt="ilustração Diagrama ER">
+            </div>
+
+        <h2>Bancos de dados relacionais</h2>
+            <div class="projects">
+                <p>Esses são bancos de dados que estruturam seus dados em tabelas, onde cada coluna possui um tipo de dado e espera receber um valor. Com isso, é possível organizar as informações do sistema e estabelecer relações entre tabelas. A linguagem que capacita o banco fazer operações é a SQL, linguagem de consulta estruturada
+                    Alguns exemplos de Sistemas Gerenciadores de Banco de Dados Relacionais são: PostgreSQL, MySQL e SQL Server.</p>
+                <p>Um ponto importante para o Sistema Gerenciador de Banco de Dados é a capacidade de conter: Atomicidade, Consistência, Isolamento e Durabilidade.</p>
+
+                 
+                <p><b>Atomicidade</b> garantia de realizar uma ação completamente, ou não a realizar;</p>
+                <p><b>Consistência</b> é a capacidade de proteger a integridade dos dados;</p>
+                <p><b>Isolamento</b> é a garantia de isolar operações que estejam ocorrendo de forma simuntânea, ou seja, uma operação não interfere na outra;</p>
+                <p><b>Durabilidade</b> garante que os dados serão preservados após as operações terem sido realizadas.</p>
+            </div>
+        <h2>Modelo Físico</h2>
+            <div class="projects">
+                <p>O modelo físico é também conhecido por "baixo nível", pois é onde o código SQL é desenvolvido.
+                 Nessa parte da modelagem, precisamos por em pratica a lógica do projeto. Para isso usamos comandos: DDL, DML, DQL e, em alguns casos, DTL e DCL. Esses dois últimos não chegamos a usar. </p>
+                
+                
+                <p><b>DDL Data Definition Language</b> - são comandos para criar a tabela(CREATE TABLE), alterá-la(ALTER TABLE) e excluí-la(DROP TABLE);</p>
+                <p><b>DML Data Manipulation Language</b> - são comandos para inserir dados na tabela(INSERT INTO), atualizar(UPDATE) e excluir (DELETE FROM);</p>
+                <p><b>DQL Data Query Language - </b> são comandos para consultar os dados do banco.
+                    <b>SELECT</b> é o principal componente para consultas, mas há outros elementos que podem ser usados com ele para deixar mais precisa a busca:</p>
+                
+                
+                <p><b>Exemplos:</b></p>
+                <p><b>GROUP BY</b> agrupa por alguma coluna específica;</p>
+                <p><b>ORDER BY</b> ordena crescente ou decrescente(DESC);</p>
+                <p><b>JOIN</b> usado para unir valores de tabelas;</p>
+                <p><b>Funções</b> são usadas para nos retornar na consulta algum valor ou cálculo específico. Por exemplo: <b>AVG(), SUM(), MIN(), MAX()</b></p>
+
+                <img id="imgSQL" src="../assets/images/BD/SQL.png" alt="ilustração consulta">
+                <p>Podemos usar diversos outros comandos em nossas consultas para obter diferentes resultados.
+                Temos a possibilidade de utilizar consulta dentro de consulta, quando não temos uma informação ou queremos automatizar um processo.</p>
+            
+                <p>Por fim, desenvolvemos um projeto de um banco de dados de uma instituição de ensino. Nesse projeto, coletamos informações com o cliente, elaboramos o Diagrama ER e escrevemos o código SQL: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/Banco%20de%20Dados/projeto1" target="_blank">projeto sistema educacional</a></p>
+                <img  id="projeto1" src="../assets/images/BD/sistema educacional DER.png" alt="projeto sistema educacional">
+            
+                <p>Link para o repositório das atividades de Banco de dados Relacionais: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/Banco%20de%20Dados" target="_blank">Diagramas ER e Exercicios</a></p>
+            </div>
+                
+            <h2>Normalização</h2>
+                <div class="projects">
+                    <p>A normalização é um processo onde os dados são organizados de maneira a deixar o banco de dados mais flexível, eliminando redundâncias e dependencias inconsistentes.
+                        Nesse processo, muitas vezes é necessário criar novas tabelas e reestabelecer as relações entre elas.</p>
+               
+                    <p><b>1 Forma Normal</b> nessa forma, os dados precisam ser atômicos, ou seja, não podem ser divisíveis, mas devem ser um único valor.</p>
+                    <p><b>2 Forma Normal</b> na segunda forma normal, não deve haver dependencias parciais(atributos não chave que não dependem funcionalmente da chave primária), e deve estar na 1FN.</p>
+                    <p><b>3 Forma Normal</b> por último, nessa forma normal, são criadas tabelas para separar colunas que não se relacione com a chave primária. Além disso, deve-se estar na 2FN para ser enquadrada na 3FN.</p>
+               
+                    <p>As relações entre entidades devem estar, pelo menos, normalizadas nas três primeiras Formas Normais(há mais três) para serem consideradas boas.</p>
+                </div>
+                
+            <h2>NoSQL</h2>
+                <div class="projects">
+                    <p>Os bancos de dados NoSQl foram desenvolvidos para resolver os problemas que os modelos relacionais estavam enfrentando: dificuldade para escalar e para trabalhar com grandes quantidades de dados e, principal, incompatibilidade entre a estrutura de armazenamento (tabelas) e a estrutura do documento.</p>
+                    <p>Os modelos NoSQL também tem tipos que diferem entre si:</p>
+                
+                    <p><b>Chave-Valor</b>  permitem que o sistema armazene seus dados sem um formato específico, sendo armazenados como duplas de chaves e seus respectivos valores.</p>
+                    <p><b>Documentos</b> armazena coleções e documentos, como vídeos, foto, arquivo txt, etc.</p>
+                    <p><b>Orientado a Colunas</b> guardam seus dados divididos por colunas, permitindo que sejam facilmente acessadas as colunas de múltiplos registros.</p>
+                    <p><b>Grafos</b> essa é uma abordagem útil quando é necessário fazer consultas complexas. Muito usado e redes sociais e mecanismos de recomendação.</p>
+                
+                    <img src="../assets/images/BD/tipos de nosql.jpg" alt="tipos NoSQl">
+                
+                    <p>O banco de dados NoSQL que nós utilizamos foi o Mongo DB. Esse é um banco de dados orientado a documentos. É muito utilizado pelo seu alto desempenho e por suportar escalabilidade horizontal e vertical. Além disso, ele é multiplataforma.</p>
+                    <img id="imgMongo" src="../assets/images/BD/mongoDB.webp" alt="ilustração Mongo DB">
+                </div>
+                <p>Ver todos os projetos: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/Banco%20de%20Dados"><img id="github" src="../assets/images/icons/github.png" alt="github icon"></a></p>
+            </main>
+    <footer>2024 &COPY</footer>
 </body>
 </html>

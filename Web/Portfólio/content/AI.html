@@ -4,39 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automação Industrial</title>
-    <link rel="stylesheet" href="../assets/CSS/content.css">
+    <link rel="stylesheet" href="../assets/CSS/styleAI.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Automação Industrial</h1>
-    <h3>Tópicos<h3>
-    <ul>Arduino</ul>
-    <ul>Esp32</ul>
+    
+    <header>
+        <h1>Automação Industrial</h1>
+    </header>
+    <a href="../content/main.html"><img id="home" src="../assets/images/icons/home icon.jpg" alt="home"></a>
+    
+    <main>
+        <h2>Arduino</h2>
+            <p>No início do semestre, tivemos contato com o sistema embarcado Arduino.
+                 Para fins didáticos, usamos a plataforma TinkerCad para desenvolver nossos projetos. 
+            </p>
 
-    <h2>Arduino</h2>
-        <p>No início do semestre, tivemos contato com o sistema embarcado Arduino.
-             Para fins didáticos, usamos a plataforma TinkerCad, e nela aprendemos a utilizar alguns dispositivos controlados pelo embarcado, como o Buzzer, Led RGB e botões.
-            Na programar usamos a linguagem C++. 
-        </p>
-        <br>
-        <img id="imgArduino" src="../assets/images/arduino.jpg" alt="arduino">
-        <p>Alguns conceitos abordados nas aulas foram: </p>
-        <ul><b>DigitalWrite()</b> - Para saida de sinal do arduino para um pino específico;</ul>
-        <ul><b>DigitalRead()</b> - Para ler o estado de um pino digital;</ul>
-        <ul><b>AnalogWrite()</b> - Para saida analogica num pino específico;</ul>
-        <p>Além desses, ainda tivemos contato com o <b>monitor Serial</b>, uma ferramenta útil para verificar: estado do botão, potência do potenciomêtro e até a temperatura de um sensor de temperatura.</p>
-        <ul><b>Serial.begin(9600)</b> - Definimos no Setup para iniciarmos o monitor serial. Obs: 9600 é a taxa de transmissão.</ul>
+            <img id="imgArduino" src="../assets/images/AI/arduino.jpg" alt="arduino">
+            <h3>Projetos - Arduino</h3>
 
-    <h2>Esp32</h2>
-      <p>O microcontrolador ESP32 foi outro dispositivo que vimos nas aulas. 
-        Porém, mesmo sendo raso o contato que tivemos com ele, tivemos uma avaliação, onde desenvolvemos um programa que imprimia no display do LCD as opções (contar toques, relógio e zerar dados).</p>
-        <br>
-        <img id="imgEsp" src="../assets/images/esp32.jpg" alt="esp32">
-        <p>Alguns conceitos abordados nas aulas foram: </p>
-        <ul><b>LCD setCursor()</b> - Para definir a posição do cursor no display;</ul>
-        <ul><b>LCD clear()</b> - Para limpar todas as informações do display;</ul>
-        <ul><b>LCD print()</b> - Para inserir informações no display;</ul>
-        <br>
-        <p>Link para o repositório das atividades:<a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/Aut.%20Industrial">repositório github</a></p>
+            <div class="projects">
+                <h3>Botões</h3>
+                <img class="projetosAutInd" src="../assets/images/AI/botoes.png" alt="ilustração botoes">
+                <p>Nesse projeto aprendemos a usar: digitalRead(), comando usado para ler sinal digital. Aqui, manipulamos o LED com dois botões, onde cada um deles poderia ligar o LED, caso apertado. Se um deles estivesse pressionado, o LED ligaria. Porém, se ambos estivessem apertados, o LED apagaria.</p>
+            </div>
+            <div class="projects">
+                <h3>Armazén</h3>
+                <img class="projetosAutInd" src="../assets/images/AI/armazen.png" alt="ilustração armazen">
+                <p>Nesse projeto desenvolvemos um 'sistema de armazén' onde o buzzer sinalizava quando o nível do sensor fotorressistor alterasse. Além do buzzer, o LED RGB mudaria de cor conforme o nível do sensor.
+                     Caso o nível estivesse em 50%, o buzzer apitava uma vez e a cor do LED seria verde. Se o nível fosse até 75%, o LED seria amarelo e o buzzer apitava 2 vezes. Por fim, caso o nível fosse maior que 75%, o LED alterava para vermelho e o buzzer apitava três vezes.</p>
+            </div>
+            <div class="projects">
+                <h3>LED Analógico</h3>
+                <img class="projetosAutInd" src="../assets/images/AI/analog.png" alt="ilustração analog">
+                <p>Essa atividade consistia em fazer o LED alterar sua intensidade durante um intervalo de tempo conforme a saída analógica. Se a saída fosse 0, o LED estaria apagado. Caso fosse a intensidade máxima, o LED acenderia e teria um intervalo de 2 segundos para alterar sua intensiadade.</p>
+            </div>
+            <div class="projects">
+                <h3>Semáforo</h3> 
+                <img class="projetosAutInd" src="../assets/images/AI/semaforo.png" alt="ilustração semaforo">
+                <p>Nesse projeto, desenvolvemos um sistema que simula um semáforo. Os dois LEDs a esquerda seriam o semáforo do pedestre, e os da direita, o do veículo. Aqui, o botão tem a função de acelerar o tempo de execução do sistema.</p>
+            </div>
+        <h2>Esp32</h2>
+        <img id="imgEsp" src="../assets/images/AI/esp32.jpg" alt="esp32">
+        <p>O microcontrolador ESP32 foi outro dispositivo que vimos nas aulas. Para fins didáticos, usamos a plataforma Wokwi.</p>
+        
+        <h3>Projeto - ESP32</h3>
+        
+        <div class="projects">
+            <img class="projetosAutInd" src="../assets/images/AI/espInit.png" alt="ilustração esp32">
+            <p>Aqui o dispositivo está simulando uma inicialização.</p>
+            <img class="projetosAutInd" src="../assets/images/AI/espDigite.png" alt="ilustração esp32">
+            <p>Agora o programa espera receber uma entrada pelo monitor Serial.</p>
+            <img class="projetosAutInd" src="../assets/images/AI/espTexto.png" alt="ilustração esp32">
+            <p>Em seguida, a informação é impressa no display LCD.</p>
+        </div>
+            <p>Ver todos os projetos: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/Aut.%20Industrial"><img id="github" src="../assets/images/icons/github.png" alt="github icon"></a></p>
+            
+    </main>    
+
     <footer>2024 &COPY</footer>
 </body>
 </html>
