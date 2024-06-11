@@ -19,24 +19,19 @@ header {
     font-family: "Poppins", sans-serif;
 }
 h2, h3 {
-    display: flex;
-    justify-content: center;
-    background-color: whitesmoke;
+    display: block;
+    margin: 20px auto 10px auto;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     width: 25vw;
     padding: 10px 0px;
-    position: relative;
-    left: 37%;
 }
-h2, h3, p {
-    text-align: center;
-    margin: 20px 0px 10px 10px;
+p, h2, h3 {
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
-.projects img {
-    left:10px;
-}
+
 img {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 20px;
@@ -45,8 +40,8 @@ img {
 }
 main img {
     display: block;
-    margin: 0px auto;
-    max-width: 100%;
+    border-radius: 20px;
+    margin: 0 auto;
 }
 footer {
     margin-top: 15px;
@@ -84,12 +79,28 @@ footer {
     background-color: whitesmoke;
     border-bottom: #000 solid 1px;
 }
-#github {
+#imgAmostra_E {
+    width: 450px;
+    height: 390px;
+}
+#imgMediana {
+    width: 600px;
+    height: 370px;
+}
+#imgMedidaDisp {
+    width: 420px;
+    height: 220px;
+}
+#imgQuiQuadrado{
+    width: 620px;
+    height: 420px;
+}
+#colab {
     margin-top: 5px;
     height: 40px;
-    width: 40px;
+    width: 60px;
 }
-#github:hover {
+#colab:hover {
     transition: 300ms linear;
     transform: scale(1.1);
 }
@@ -104,43 +115,4 @@ footer {
 #home:hover {
     transition: 100ms linear;
     opacity: 0.3;
-}
-#imgIf {
-    height: 190px;
-    width: 300px;
-}
-#imgSwitch {
-    height: 190px;
-    width: 300px;
-    margin-bottom: 7px;
-}
-#imgOp {
-    height: 250px;
-    width: 450px;
-    margin-bottom: 7px;
-}
-#imgFor {
-    width: 350px;
-    height: 100px;
-    
-}
-#imgWhile {
-    width: 350px;
-    height: 200px;
-}
-#imgVetor {
-    width: 320px;
-    height: 230px;
-}
-#imgFunc {
-    width: 330px;
-    height: 140px;
-}
-#imgPOO {
-    width: 400px;
-    height: 340px;
-}
-#imgScreensaver {
-    width: 300px;
-    height: 240px;
 }

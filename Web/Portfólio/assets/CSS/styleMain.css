@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: seashell;
+    background: linear-gradient(to bottom, #F5F5F5, rgba#efeeeec9);
     max-height: 100vh;
 }
 main {
