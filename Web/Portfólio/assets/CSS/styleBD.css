@@ -1,3 +1,4 @@
+/* Tags */
 body{
     margin: 0px;
     padding: 0px;
@@ -57,6 +58,7 @@ footer {
     color: #fff;
     background-color: black;
 }
+/* Classes */
 .projects {
     background-color: #aaaeb0dc;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -81,7 +83,7 @@ footer {
     background-color: #fff;
     border-bottom: #000 solid 1px;
 }
-
+/* IDs */
 #home {
     top: 25px;
     position: sticky;

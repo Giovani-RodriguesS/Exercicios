@@ -1,3 +1,4 @@
+/* Tags */
 body {
     margin: 0px;
     padding: 0px;
@@ -7,8 +8,8 @@ body {
 main {
     width: 100vw;
     display: flex;
-    height: 100vh;
-    background: linear-gradient(to bottom, #F5F5F5, rgba#efeeeec9);
+    height: 80vh;
+    background-color: whitesmoke;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     
 }
@@ -27,12 +28,18 @@ header {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+}
 a {
     color: inherit;
 }
 img {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -71,10 +78,41 @@ footer {
     color: #fff;
     background-color: black;
 }
+/* IDs */
 #github {
-    margin: 8px;
-
+    height: 50px;
+    width: 50px;
+    margin: 15px;
     background-color: #000;
-    border:#fff solid 1px;
     padding: 0px;
+}
+#linkedin {
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+}
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    width: 45%;
+    height: 70%;
+    max-height: 70%;
+    max-width: 70%;
+    opacity: 0.8;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.76) 5px 8px 0px;
+    transition: 300ms linear;
+}
+#aboutMe p {
+    padding: 20px;
+    margin: 0 auto;
+}
+#aboutMe:hover {
+    box-shadow: rgba(0, 0, 0, 0.76) 9px 14px 0px;
+    transition: 300ms linear;
+}
+#aboutMe img {
+    display: inline;
 }

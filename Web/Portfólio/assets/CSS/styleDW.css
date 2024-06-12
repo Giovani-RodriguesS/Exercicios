@@ -1,3 +1,4 @@
+/* tags */
 body{
     margin: 0px;
     padding: 0px;
@@ -19,9 +20,10 @@ header {
     font-family: "Poppins", sans-serif;
 }
 img {
+    display: block;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 20px;
-    margin: 0px 0px;
+    margin: 0px 7px;
     position: relative;
 }
 main h1 {
@@ -30,16 +32,23 @@ main h1 {
     justify-content: center;
     padding: 5px;
     width: 30%;
-    margin: 0 auto;
-    background-color: whitesmoke;
+    margin: 10px auto;
+    background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;;
     border-radius: 20px;
     transition: 300ms linear;
 }
 main h1:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 300ms linear;
 }
+a {
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+    font-family: 'Roboto', sans-serif;;
+}
+
 footer {
     margin-top: 15px;
     height: 100px;
@@ -54,21 +63,30 @@ footer {
 }
 p {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
+/* Classes */
+.projects {
+    
+    background-color: #F5F5F5;
+    padding: 15px;
+}
+
+/* IDs */
 #github {
     margin-top: 5px;
     height: 40px;
     width: 40px;
+    
 }
 #github:hover {
     transition: 300ms linear;
     transform: scale(1.1);
 }
 #home {
-    top: 25px;
-    position: sticky;
     left: 20px;
     width: 30px;
     height: 30px;
