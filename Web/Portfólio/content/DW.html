@@ -15,17 +15,27 @@
     <!-- Tag home -->
     <a href="../content/main.html"><img id="home" src="../assets/images/icons/home icon.jpg" alt="home"></a>
     <main>
+        <div class="options">
+            <h1 onclick="option(1)" id="summaryBT">Resumo</h1>
+            <h1 onclick="option(2)" id="projectBT">Projetos</h1>
+        </div>
+        <div class="summary">
+            <p>HTML semântico, CSS e JS. Em HTML, conhecemos as principais tags usadas numa página, como span a, para links, p , para parágrafo, h1, para título de cabeçalho, entre outras. Exploramos ainda o uso de classes e IDs, que são úteis quando vamos estilizar a página e desenvolver interatividade com JavaScript.</p>
+            <p>Em CSS, vimos que podemos selecionar um elemento do documento HTML pela Tag, classe e ID. Pela tag, selecionará todos os elementos dessa tag. A vantagem e desvantagem de selecionar dessa forma é todos os elementos serão selecionados. A seleção pela classe, permitirá uma estilização mais seletiva, pois os elementos impactados serão aqueles que tiverem como atributo a classe selecionada. Já pelo ID, apenas um elemento será estilizado, visto que o ID é único, não podendo ser distribuído a outro elemento HTML.</p>
+            <p>Em JavaScript, aprendemos a sintaxe da linguagem e como manipular os elementos HTML pela árvore DOM. A árvore DOM é composta por nós que são os elementos da página HTML e por meio dela podemos acessar os elementos da página manipular seus comportamentos.</p>
+        </div>
         <div class="projects">
-            <h1><a href="../../Calculadora/infixa.html">Calculadora Infixa</a></h1>
-            <h1><a href="../../Calculadora/posfixa.html">Calculadora PosFixa</a></h1>
-            <h1><a href="../../Calculadoras/index.html">Calculadoras</a></h1>
-            <h1><a href="../../CV/index.html">Currículo</a></h1>
-            <h1><a href="../../IMC/index2.html">IMC</a></h1>
-            <h1><a href="../../todo/index.html">ToDo</a></h1>
+            <h3><a href="../../Calculadora/infixa.html" >Calculadora Infixa</a></h3>
+            <h3><a href="../../Calculadora/posfixa.html">Calculadora PosFixa</a></h3>
+            <h3><a href="../../Calculadoras/index.html">Calculadoras</a></h3>
+            <h3><a href="../../CV/index.html">Currículo</a></h3>
+            <h3><a href="../../IMC/index2.html">IMC</a></h3>
+            <h3><a href="../../todo/index.html">ToDo</a></h3>
         </div>       
         <!-- link github -->
-        <p>Ver todos os projetos: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Web" target="_blank"><img id="github" src="../assets/images/icons/github.png" alt="github icon"></a></p>
+        <p id="allProject">Ver todos os projetos: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Web" target="_blank"><img id="github" src="../assets/images/icons/github.png" alt="github icon"></a></p>
     </main>
    <footer>2024 &COPY</footer>
+   <script src="../assets/JS/scriptDW.js"></script>
 </body>
 </html>

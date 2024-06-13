@@ -2,7 +2,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: linear-gradient(to bottom, #F5F5F5, rgba#efeeeec9);
+    background-color: whitesmoke;
 }
 header {
     align-items: center;
@@ -20,13 +20,12 @@ header {
     font-family: "Poppins", sans-serif;
 }
 img {
-    display: block;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 20px;
-    margin: 0px 7px;
+    margin: 0px 0px;
     position: relative;
 }
-main h1 {
+main h1, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,13 +37,12 @@ main h1 {
     border-radius: 20px;
     transition: 300ms linear;
 }
-main h1:hover {
+main h1:hover, h3:hover {
     transform: scale(1.05);
     transition: 300ms linear;
 }
 a {
     text-decoration: none;
-    align-items: center;
     color: #000;
     font-family: 'Roboto', sans-serif;;
 }
@@ -69,12 +67,39 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 /* Classes */
+.options {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer; 
+}
 .projects {
-    
+    display: none;
     background-color: #F5F5F5;
     padding: 15px;
 }
-
+.summary {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    width: 45%;
+    height: 70%;
+    max-height: 70%;
+    max-width: 70%;
+    opacity: 0.8;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.76) 5px 8px 0px;
+    transition: 300ms linear;
+}
+.summary p {
+    padding: 25px;
+    margin: 0 auto;
+}
+.summary:hover {
+    box-shadow: rgba(0, 0, 0, 0.76) 9px 14px 0px;
+    transition: 300ms linear;
+    background-color: #fff;
+}
 /* IDs */
 #github {
     margin-top: 5px;
@@ -82,11 +107,16 @@ p {
     width: 40px;
     
 }
+#allProject {
+    visibility: hidden;
+}
 #github:hover {
     transition: 300ms linear;
     transform: scale(1.1);
 }
 #home {
+    top: 25px;
+    position: sticky;
     left: 20px;
     width: 30px;
     height: 30px;
@@ -95,4 +125,7 @@ p {
 #home:hover {
     transition: 100ms linear;
     opacity: 0.3;
+}
+#summaryBT {
+    background-color: #0003;
 }

@@ -8,13 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- cabeçalho -->
     <header>
         <h1>Banco de Dados</h1>
     </header>
+    <!-- Tag home -->
     <a href="../content/main.html"><img id="home" src="../assets/images/icons/home icon.jpg" alt="home"></a>
     
     <main>
-    
+         <!-- Modelagem de dados --> 
         <h2>Modelagem de dados</h2>
             <div class="projects">
                 <p>No início da disciplina, conhecemos a modelagem de dados, que é a forma como iremos representar os dados no sistema do banco de dados.</p>
@@ -26,12 +28,13 @@
                  <p><b>Modelo Lógico</b> transformamos o conceito em tabelas;</p>
                  <p><b>Modelo Físico</b> transcrevemos a lógica em código SQL.</p>
             </div>
+        <!-- Diagrama ER --> 
         <h2>Diagrama ER</h2>
             <div class="projects">
                 <p>O Diagrama Entidade Relacionamento é usado para nos ajudar a enxergar como cada entidade irá se relacionar com outra no banco de dados. Também usamos convensões para nos auxiliar na identificação de elementos e informações no diagrama. Segue um exemplo de Diagrama ER:</p>
                 <img id="imgDER" src="../assets/images/BD/Diagrama ER.png" alt="ilustração Diagrama ER">
             </div>
-
+        <!-- Bancos de dados relacionais --> 
         <h2>Bancos de dados relacionais</h2>
             <div class="projects">
                 <p>Esses são bancos de dados que estruturam seus dados em tabelas, onde cada coluna possui um tipo de dado e espera receber um valor. Com isso, é possível organizar as informações do sistema e estabelecer relações entre tabelas. A linguagem que capacita o banco fazer operações é a SQL, linguagem de consulta estruturada
@@ -44,17 +47,16 @@
                 <p><b>Isolamento</b> é a garantia de isolar operações que estejam ocorrendo de forma simuntânea, ou seja, uma operação não interfere na outra;</p>
                 <p><b>Durabilidade</b> garante que os dados serão preservados após as operações terem sido realizadas.</p>
             </div>
+        <!-- Modelo Físico -->  
         <h2>Modelo Físico</h2>
             <div class="projects">
                 <p>O modelo físico é também conhecido por "baixo nível", pois é onde o código SQL é desenvolvido.
                  Nessa parte da modelagem, precisamos por em pratica a lógica do projeto. Para isso usamos comandos: DDL, DML, DQL e, em alguns casos, DTL e DCL. Esses dois últimos não chegamos a usar. </p>
                 
-                
                 <p><b>DDL Data Definition Language</b> - são comandos para criar a tabela(CREATE TABLE), alterá-la(ALTER TABLE) e excluí-la(DROP TABLE);</p>
                 <p><b>DML Data Manipulation Language</b> - são comandos para inserir dados na tabela(INSERT INTO), atualizar(UPDATE) e excluir (DELETE FROM);</p>
                 <p><b>DQL Data Query Language - </b> são comandos para consultar os dados do banco.
                     <b>SELECT</b> é o principal componente para consultas, mas há outros elementos que podem ser usados com ele para deixar mais precisa a busca:</p>
-                
                 
                 <p><b>Exemplos:</b></p>
                 <p><b>GROUP BY</b> agrupa por alguma coluna específica;</p>
@@ -71,7 +73,7 @@
             
                 <p>Link para o repositório das atividades de Banco de dados Relacionais: <a href="https://github.com/Giovani-RodriguesS/Exercicios/tree/main/Exercicios/Banco%20de%20Dados" target="_blank">Diagramas ER e Exercicios</a></p>
             </div>
-                
+            <!-- Normalização -->  
             <h2>Normalização</h2>
                 <div class="projects">
                     <p>A normalização é um processo onde os dados são organizados de maneira a deixar o banco de dados mais flexível, eliminando redundâncias e dependencias inconsistentes.
@@ -83,7 +85,7 @@
                
                     <p>As relações entre entidades devem estar, pelo menos, normalizadas nas três primeiras Formas Normais(há mais três) para serem consideradas boas.</p>
                 </div>
-                
+            <!-- NoSQL -->
             <h2>NoSQL</h2>
                 <div class="projects">
                     <p>Os bancos de dados NoSQl foram desenvolvidos para resolver os problemas que os modelos relacionais estavam enfrentando: dificuldade para escalar e para trabalhar com grandes quantidades de dados e, principal, incompatibilidade entre a estrutura de armazenamento (tabelas) e a estrutura do documento.</p>
