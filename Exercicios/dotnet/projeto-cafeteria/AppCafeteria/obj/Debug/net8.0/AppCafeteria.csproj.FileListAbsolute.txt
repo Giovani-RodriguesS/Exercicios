@@ -1,0 +1,15 @@
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\bin\Debug\net8.0\AppCafeteria.exe
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\bin\Debug\net8.0\AppCafeteria.deps.json
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\bin\Debug\net8.0\AppCafeteria.runtimeconfig.json
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\bin\Debug\net8.0\AppCafeteria.dll
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\bin\Debug\net8.0\AppCafeteria.pdb
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.AssemblyInfoInputs.cache
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.AssemblyInfo.cs
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.csproj.CoreCompileInputs.cache
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.sourcelink.json
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.dll
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\refint\AppCafeteria.dll
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.pdb
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\AppCafeteria.genruntimeconfig.cache
+C:\Projetos\Exercicios\dotnet\projeto-cafeteria\AppCafeteria\obj\Debug\net8.0\ref\AppCafeteria.dll
