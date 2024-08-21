@@ -7,16 +7,13 @@ async function buscarEndereco () {
         return;
     }
 
+    const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const dados = await resposta.json() 
 
-        const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-
-        if (!resposta.ok) {
-            throw new Error('Erro ao buscar o endereco.')
-        }
-        
-        const dados = await resposta.json();
-    
-        document.getElementById('resultado').innerHTML = <p>`${dados.logradouro}`</p>
-
+    if (!resposta.ok) {
+        throw new Error('Erro ao buscar o endereco.')
+    }
+    console.log(dados)
+    document.getElementById('resultado').innerText = `Logradouro: ${dados.logradouro} \n Bairro: ${dados.bairro}`
    
 }
