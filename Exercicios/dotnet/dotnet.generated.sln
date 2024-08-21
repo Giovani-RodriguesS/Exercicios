@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projeto-cafeteria", "projeto-cafeteria", "{BF89D524-77BB-4206-AAE3-8413E68DF200}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercicios", "Exercicios", "{2BCD5678-EDF8-46FE-B08F-B9819A334BC2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppCafeteria", "projeto-cafeteria\AppCafeteria\AppCafeteria.csproj", "{2B55E745-5F60-4A2D-BDED-459E17A6DD0D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet", "dotnet", "{70443C19-DD6E-4984-A0BB-DD5ABC0AB606}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projeto-cafeteria", "projeto-cafeteria", "{31122128-F7A3-4230-9399-CAF7E2B5F03E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppCafeteria", "Exercicios\dotnet\projeto-cafeteria\AppCafeteria\AppCafeteria.csproj", "{8B9035BE-09C6-440C-B34D-F019F4F85B43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +17,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2B55E745-5F60-4A2D-BDED-459E17A6DD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B55E745-5F60-4A2D-BDED-459E17A6DD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B55E745-5F60-4A2D-BDED-459E17A6DD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B55E745-5F60-4A2D-BDED-459E17A6DD0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9035BE-09C6-440C-B34D-F019F4F85B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9035BE-09C6-440C-B34D-F019F4F85B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9035BE-09C6-440C-B34D-F019F4F85B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9035BE-09C6-440C-B34D-F019F4F85B43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2B55E745-5F60-4A2D-BDED-459E17A6DD0D} = {BF89D524-77BB-4206-AAE3-8413E68DF200}
+		{70443C19-DD6E-4984-A0BB-DD5ABC0AB606} = {2BCD5678-EDF8-46FE-B08F-B9819A334BC2}
+		{31122128-F7A3-4230-9399-CAF7E2B5F03E} = {70443C19-DD6E-4984-A0BB-DD5ABC0AB606}
+		{8B9035BE-09C6-440C-B34D-F019F4F85B43} = {31122128-F7A3-4230-9399-CAF7E2B5F03E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {028AA412-212E-444E-BDA1-B2C617306464}
