@@ -12,35 +12,93 @@ Implementar nosso sistema melhora o controle, reduz desperdícios e aumenta a ef
 
 # ***Público alvo***
 
-[Identificar os principais grupos de usuários que irão utilizar o produto. Esta seção ajuda a direcionar o desenvolvimento do produto e a garantir que as necessidades dos usuários sejam atendidas. Compreender o público-alvo permite personalizar funcionalidades, melhorar a experiência do usuário e maximizar a adoção do produto.]
-
-**[Priorizar Usuários:** Se houver vários grupos de usuários, priorize-os de acordo com a importância para o sucesso do produto. Se houver necessidade, explique por que determinados grupos são mais críticos para o sucesso inicial do produto.]
+Nosso produto foi desenvolvido para atender as exigências de gestores,  gerentes e engenheiros seja dos setores da Qualidade, como também de Operações.
 
 | Perfil de usuário | Descrição, necessidades e interesses. |
 | --- | --- |
-| Primeiro grupo de usuários | Descrição breve de quem são e suas necessidades principais. |
-| Segundo grupo de usuários | Descrição breve de quem são e suas necessidades principais. |
-| Terceiro grupo de usuários | Descrição breve de quem são e suas necessidades principais. |
+| Gerentes | Acompanhamento da produção em tempo real, tempo de ciclo, gastos com defeitos e consumo    q   '   |
+| Gestores | Acompanhamento de tempo de ciclo, percentual de defeitos e disperdicios de cada setor |
+| Engenheiros | Acompanhamento de consumo energético e tempo de ciclo |
 
 # *Personas*
 
-[Para uma compreensão mais profunda, crie personas detalhadas para cada grupo de usuários.]
+1. **Gerente de Produção - Carla Moreira:**  Carla Moreira, com 20 anos de experiência, busca otimizar a produção automotiva e reduzir custos. Nosso sistema permite monitoramento em tempo real, armazenamento seguro de dados e automação, ajudando-a a antecipar problemas e tomar decisões estratégicas rapidamente.
 
-1. **Nome da Persona 1:**  representação fictícia de um usuário típico, incluindo detalhes como nome, ocupação, objetivos e frustrações.
-2. **Nome da Persona 2:**  representação fictícia de um usuário típico, incluindo detalhes como nome, ocupação, objetivos e frustrações.
-3. **Nome da Persona 3:**  representação fictícia de um usuário típico, incluindo detalhes como nome, ocupação, objetivos e frustrações.
+2. **Gestor de Qualidade - Ricardo Santos**  Ricardo Santos, com 15 anos de experiência, garante que todos os produtos atendam aos padrões de qualidade. O sistema coleta dados em tempo real, oferece alertas para falhas e automatiza verificações, permitindo que Ricardo se concentre em melhorias contínuas.
 
-<aside>
-💡 **Dicas Adicionais:**
-
-- Utilize dados de pesquisa de mercado para identificar e descrever seu público-alvo.
-- Entrevistas e questionários com usuários potenciais podem fornecer insights valiosos sobre suas necessidades.
-- Mantenha a descrição concisa, mas detalhada o suficiente para fornecer uma imagem clara de cada grupo de usuários.
-</aside>
+3. **Engenheira de Produção - Luana Carvalho**  Luana Carvalho, com 8 anos de experiência, foca em automatizar e otimizar a linha de produção. Nosso sistema oferece dados rápidos, facilita a automação e justifica novos investimentos, ajudando Luana a implementar soluções eficientes e inovadoras.
 
 ---
 
 # *Requisitos Funcionais*
+## **Diagrama**
+```mermaid
+graph TB
+    subgraph Dashboard
+        A[Menu]
+        B[Gráficos]
+        C[Tempo de ciclo]
+        D[Quantidade de Peças]
+        E[Consumo de Energia]
+        F[Taxa de Defeitos]
+        R[Relatório]
+        T[Tabelas]
+        A<-->E-->R
+        A<-->C-->R
+        A<-->D-->R
+        A<-->F-->R
+        E-->T
+        C-->T
+        D-->T
+        F-->T
+        
+        L[Tela Inicial]<-->A
+        L-->B
+      
+    end
+```
+
+Diagrama de Caso de Uso para o Sistema de Coleta e Análise de Dados de Produção Automatizado
+
+ Define o diagrama de caso de uso
+ o "actor" representa os atores externos e "usecase" representa os casos de uso
+
+ Início do diagrama
+
+
+
+```mermaid
+graph TB
+    subgraph Dashboard
+        A[Menu]
+        B[Gráficos Gerais]
+        J[Gráficos Especificos]
+        C[Tempo de ciclo]
+        D[Quantidade de Peças]
+        E[Consumo de Energia]
+        F[Taxa de Defeitos]
+        R[Relatório]
+        T[Tabelas]
+        I[Filtros]
+        G[Usuário]
+        
+        G-->L
+        A<-->E-->R
+        A<-->C-->R
+        A<-->D-->R
+        A<-->F-->R
+        E-->T
+        C-->T
+        D-->T
+        F-->T
+        T<-->J
+        T<-->|Ver dados|I
+        R<-->|Ver dados|I
+        L[Tela Inicial]<-->A
+        L<-->|Ver dados|B
+      
+    end
+```
 
 [Os requisitos funcionais descrevem as funcionalidades e capacidades específicas que o produto deve ter. Eles detalham o que o sistema deve fazer, as interações com os usuários e outras partes do sistema.]
 
@@ -117,3 +175,6 @@ Implementar nosso sistema melhora o controle, reduz desperdícios e aumenta a ef
 # 💌 *Plano de comunicação*
 
 Quando as comunicações acontecerão? Quem será notificado sobre esse novo recurso? Enviaremos e-mails e notificações no aplicativo?
+
+## *Links*
+- [Miro](https://miro.com/app/board/uXjVKlCNuX4=/)
