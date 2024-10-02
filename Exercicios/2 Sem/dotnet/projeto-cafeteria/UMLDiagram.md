@@ -31,7 +31,7 @@ classDiagram
         + decimal CalcularPreco()
     }
 
-    Pedido --> Item
+    Pedido *-- Item
     Item <|-- Bebida : "abstract"
     Bebida <|-- Cafe
     Item <|-- Sobremesa
