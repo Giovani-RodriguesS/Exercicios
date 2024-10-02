@@ -31,42 +31,36 @@ Nosso produto foi desenvolvido para atender as exigências de gestores,  gerente
 ---
 
 # *Requisitos Funcionais*
-## **Diagrama**
+## **Diagrama de Contexto**
 ```mermaid
 graph TB
     subgraph Dashboard
-        A[Menu]
-        B[Gráficos]
-        C[Tempo de ciclo]
-        D[Quantidade de Peças]
-        E[Consumo de Energia]
-        F[Taxa de Defeitos]
-        R[Relatório]
-        T[Tabelas]
-        A<-->E-->R
-        A<-->C-->R
-        A<-->D-->R
-        A<-->F-->R
-        E-->T
+        A[Menu]<-->E[Consumo de Energia]-->R[Relatório]
+        A<-->C[Tempo de ciclo]-->R
+        A<-->D[Quantidade de Peças]-->R
+        A<-->F[Taxa de Defeitos]-->R
+        E--> T[Tabelas]
         C-->T
         D-->T
         F-->T
         
         L[Tela Inicial]<-->A
-        L-->B
+        L-->B[Gráficos]
       
     end
 ```
 
-Diagrama de Caso de Uso para o Sistema de Coleta e Análise de Dados de Produção Automatizado
-
- Define o diagrama de caso de uso
- o "actor" representa os atores externos e "usecase" representa os casos de uso
-
- Início do diagrama
+[Os requisitos funcionais descrevem as funcionalidades e capacidades específicas que o produto deve ter. Eles detalham o que o sistema deve fazer, as interações com os usuários e outras partes do sistema.]
 
 
+1. **Filtrar dados:** Capacidade de filtrar dados por data, crescentemente e decrescentemente. **P1**
+2. **Consultar dados:** Consultar dados por meio de gráficos, tabelas e relatórios, possibilitando mostrar os dados de maneira dinâmica.**P1**
+3. **Alertas inteligentes:** Disparar alertas ao se perceber que alguma métrica de monitoramento foi ultrapassada. **P2**
 
+**P1** = **Crítico | P1 = Importante | P2 = Bom ter**
+
+### *Caso de uso*
+## **Diagrama Caso de Uso**
 ```mermaid
 graph TB
     subgraph Dashboard
@@ -99,45 +93,23 @@ graph TB
       
     end
 ```
-
-[Os requisitos funcionais descrevem as funcionalidades e capacidades específicas que o produto deve ter. Eles detalham o que o sistema deve fazer, as interações com os usuários e outras partes do sistema.]
-
-1. **F1:** Para cada funcionalidade, inclua uma descrição detalhada, critérios de aceitação e, se aplicável, diagramas de fluxo ou casos de uso. **P1**
-2. **F2:** Para cada funcionalidade, inclua uma descrição detalhada, critérios de aceitação e, se aplicável, diagramas de fluxo ou casos de uso. **P2**
-3. **F3:** Para cada funcionalidade, inclua uma descrição detalhada, critérios de aceitação e, se aplicável, diagramas de fluxo ou casos de uso. **P3**
-
-**P1** = **Crítico | P1 = Importante | P2 = Bom ter**
-
-### *Casos de uso*
-
-> **Caso de uso 1:** Descreva como os usuários utilizarão o produto em diferentes cenários. Isso ajuda a ilustrar a aplicação prática das funcionalidades.
-> 
-
-> **Caso de uso 2:** Descreva como os usuários utilizarão o produto em diferentes cenários. Isso ajuda a ilustrar a aplicação prática das funcionalidades.
-> 
-
-> **Caso de uso 3:** Descreva como os usuários utilizarão o produto em diferentes cenários. Isso ajuda a ilustrar a aplicação prática das funcionalidades.
-> 
-
 ---
 
 # *Requisitos Não Funcionais*
 
-[Os requisitos não funcionais descrevem os critérios de desempenho, segurança, usabilidade e outras características que o sistema deve possuir. Eles garantem que o sistema funcione eficientemente sob diversas condições.]
+1. **Armazenamento de dados:** Capacidade de armazenar grandes volumes de dados. **P1**
+2. **Confiabilidade:** Garantir o tráfego dos dados com segurança e integridade. **P1**
+3. **Agilidade:** Garantir agilidade no processo de captura de dados em tempo real e no transporte destes. **P1**
+4. **Escalabilidade:** Permitir que o sistema seja capaz de lidar com o aumento da quantidade de sensores e volume de dados. **P2**
+5. **Documentação:** Documentar o código-fonte do projeto, para facilitar manutenções e atualizações futuras. **P1**
 
-1. **NF1:** Identifique aspectos como desempenho, segurança, usabilidade, confiabilidade, etc. **P1**
-2. **NF2:** Identifique aspectos como desempenho, segurança, usabilidade, confiabilidade, etc. **P2**
-3. **NF3:** Identifique aspectos como desempenho, segurança, usabilidade, confiabilidade, etc. **P3**
 
-**P1** = **Crítico | P1 = Importante | P2 = Bom ter**
+**P1** = **Crítico | P2 = Importante | P3 = Bom ter**
 
 ### 📊 Métricas
-
-[Seja específico ao descrever os padrões ou métricas que devem ser atendidos. Inclua descrições detalhadas e, se possível, métricas mensuráveis.]
-
 | Medida | Estado atual | Esperado | Resultados |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| Tempo de resposta | - | 3.5 segundos |  |
 |  |  |  |  |
 |  |  |  |  |
 
