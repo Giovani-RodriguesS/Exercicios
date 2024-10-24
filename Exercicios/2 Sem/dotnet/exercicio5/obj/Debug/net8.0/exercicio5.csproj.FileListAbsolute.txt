@@ -1,0 +1,15 @@
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\bin\Debug\net8.0\exercicio5.exe
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\bin\Debug\net8.0\exercicio5.deps.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\bin\Debug\net8.0\exercicio5.runtimeconfig.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\bin\Debug\net8.0\exercicio5.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\bin\Debug\net8.0\exercicio5.pdb
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.AssemblyInfoInputs.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.AssemblyInfo.cs
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.csproj.CoreCompileInputs.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.sourcelink.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\refint\exercicio5.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.pdb
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\exercicio5.genruntimeconfig.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\exercicio5\obj\Debug\net8.0\ref\exercicio5.dll

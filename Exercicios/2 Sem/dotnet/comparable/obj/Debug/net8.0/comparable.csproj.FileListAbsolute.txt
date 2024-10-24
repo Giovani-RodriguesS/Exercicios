@@ -1,0 +1,15 @@
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.AssemblyInfoInputs.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.AssemblyInfo.cs
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.csproj.CoreCompileInputs.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.sourcelink.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\bin\Debug\net8.0\comparable.exe
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\bin\Debug\net8.0\comparable.deps.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\bin\Debug\net8.0\comparable.runtimeconfig.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\bin\Debug\net8.0\comparable.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\bin\Debug\net8.0\comparable.pdb
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\refint\comparable.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.pdb
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\comparable.genruntimeconfig.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\comparable\obj\Debug\net8.0\ref\comparable.dll

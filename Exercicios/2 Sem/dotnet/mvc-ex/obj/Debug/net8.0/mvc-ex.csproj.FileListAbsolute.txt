@@ -1,0 +1,15 @@
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.AssemblyInfoInputs.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.AssemblyInfo.cs
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.csproj.CoreCompileInputs.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.sourcelink.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\bin\Debug\net8.0\mvc-ex.exe
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\bin\Debug\net8.0\mvc-ex.deps.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\bin\Debug\net8.0\mvc-ex.runtimeconfig.json
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\bin\Debug\net8.0\mvc-ex.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\bin\Debug\net8.0\mvc-ex.pdb
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\refint\mvc-ex.dll
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.pdb
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\mvc-ex.genruntimeconfig.cache
+C:\Repositórios\Projetos\Exercicios\2 Sem\dotnet\mvc-ex\obj\Debug\net8.0\ref\mvc-ex.dll
