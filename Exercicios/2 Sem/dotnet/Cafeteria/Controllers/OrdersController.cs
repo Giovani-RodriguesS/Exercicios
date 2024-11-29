@@ -54,7 +54,7 @@ namespace Cafeteria.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Quantity,Client")] Order order)
+        public async Task<IActionResult> Create([Bind("Id,TimeStamp,TotalPrice")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Cafeteria.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Quantity,Client")] Order order)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TimeStamp,TotalPrice")] Order order)
         {
             if (id != order.Id)
             {

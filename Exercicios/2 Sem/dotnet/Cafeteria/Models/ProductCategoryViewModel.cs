@@ -10,3 +10,4 @@ public class ProductCategoryViewModel
     public string? ProductCategory { get; set; }
     public string? SearchString { get; set; }
 }
+
