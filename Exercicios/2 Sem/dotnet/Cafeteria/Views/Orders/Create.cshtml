@@ -1,3 +1,4 @@
+@using System.Globalization
 @model OrderCreateViewModel
 
 @{
@@ -71,7 +72,7 @@
 
         <div>
             <label>Total Price: </label>
-            <span id="totalPrice">@Model.TotalPrice.ToString("C")</span>
+            <span id="totalPrice">@Model.TotalPrice.ToString("C", new CultureInfo("pt-BR"))</span>
         </div>
 
         <form asp-action="Create" method="post">
