@@ -12,23 +12,27 @@
     <hr />
     <h5>Order Items</h5>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-
-@foreach (var item in Model) {
-        <tr>
-            <td>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Product.Price.ToString("C")</td>
+                    <td>@(item.Product.Price * item.Quantity).ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |

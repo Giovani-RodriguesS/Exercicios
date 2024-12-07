@@ -145,15 +145,35 @@ namespace Cafeteria.Controllers
             }
 
             var order = await _context.Order.FindAsync(id);
-            var orderItem = await _context.OrderItem.Where(idO => idO.IdOrder == id).ToListAsync();
-            
-            
-            // terminar aqui
+
+            List<OrderItem> orderItem = await _context.OrderItem.Where(idO => idO.IdOrder == id).ToListAsync();
+
+            List<ProductViewOrderDetail> itemsOfOrder = new List<ProductViewOrderDetail>();
+            foreach (var item in orderItem)
+            {
+                var product = await _context.Product.FindAsync(item.IdProduct);
+
+                itemsOfOrder.Add(new ProductViewOrderDetail
+                {
+                    Name = product.Name,
+                    Category = product.Category,
+                    Quantity = item.Quantity,
+                    Price = product.Price,
+                    SubTotal = product.Price * item.Quantity
+                });
+            }
+
+            var viewModel = new OrderDetailsViewModel
+            {
+                Order = order,
+                ItemsOfOrder = itemsOfOrder
+            };
+
             if (order == null)
             {
                 return NotFound();
             }
-            return View(order);
+            return View(viewModel);
         }
 
         // POST: Orders/Edit/5
