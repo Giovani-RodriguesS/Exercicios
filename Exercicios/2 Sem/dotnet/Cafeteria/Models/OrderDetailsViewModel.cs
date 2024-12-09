@@ -1,5 +1,6 @@
+namespace Cafeteria.Models;
 public class OrderDetailsViewModel
 {
-    public Order Order { get; set; }
-    public List<OrderItem> ItemsOfOrder { get; set; }
+    public Order? Order { get; set; }
+    public List<ProductViewOrderDetail>? ItemsOfOrder { get; set; }
 }

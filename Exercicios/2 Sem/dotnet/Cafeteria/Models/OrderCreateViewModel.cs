@@ -1,6 +1,6 @@
-using Cafeteria.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
+namespace Cafeteria.Models;
 public class OrderCreateViewModel
 { 
     public List<Product> Products {get; set;} = new List<Product>(); // Resgata todos os produtos do BD
