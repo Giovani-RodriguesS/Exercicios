@@ -1,0 +1,15 @@
+C:\Dio\desafio-tdd\Calculadora\bin\Debug\net8.0\desafio-tdd.exe
+C:\Dio\desafio-tdd\Calculadora\bin\Debug\net8.0\desafio-tdd.deps.json
+C:\Dio\desafio-tdd\Calculadora\bin\Debug\net8.0\desafio-tdd.runtimeconfig.json
+C:\Dio\desafio-tdd\Calculadora\bin\Debug\net8.0\desafio-tdd.dll
+C:\Dio\desafio-tdd\Calculadora\bin\Debug\net8.0\desafio-tdd.pdb
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.AssemblyInfoInputs.cache
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.AssemblyInfo.cs
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.csproj.CoreCompileInputs.cache
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.sourcelink.json
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.dll
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\refint\desafio-tdd.dll
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.pdb
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\desafio-tdd.genruntimeconfig.cache
+C:\Dio\desafio-tdd\Calculadora\obj\Debug\net8.0\ref\desafio-tdd.dll

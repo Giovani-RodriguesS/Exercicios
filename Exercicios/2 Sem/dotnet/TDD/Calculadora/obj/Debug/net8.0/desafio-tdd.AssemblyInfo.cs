@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Cafeteria")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("desafio-tdd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecd1b5a66a3a72e47010d74f3ff679ab823fab7a")]
-[assembly: System.Reflection.AssemblyProductAttribute("Cafeteria")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Cafeteria")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37e0ee70f2028e1e824574a1cb3931df9bc11036")]
+[assembly: System.Reflection.AssemblyProductAttribute("desafio-tdd")]
+[assembly: System.Reflection.AssemblyTitleAttribute("desafio-tdd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
